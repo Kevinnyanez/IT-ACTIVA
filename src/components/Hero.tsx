@@ -20,30 +20,30 @@ const Hero = () => {
         <div className="max-w-4xl">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Transformamos tu 
+              La comunicación 
               <span className="block bg-gradient-accent bg-clip-text text-transparent">
-                Visión en Resultados
+                transforma la realidad
               </span>
             </h1>
             
             <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
-              Consultoría estratégica de clase mundial para empresas que buscan 
-              excelencia operacional y crecimiento sostenible.
+              Impulsamos tu marca con estrategias digitales, inteligencia artificial 
+              y asesoramiento en gestión pública para gobiernos locales.
             </p>
 
             {/* Value Props */}
             <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
               <div className="flex items-center text-primary-foreground/90">
                 <CheckCircle className="w-5 h-5 mr-2 text-accent" />
-                <span>15+ años de experiencia</span>
+                <span>Comunicación estratégica</span>
               </div>
               <div className="flex items-center text-primary-foreground/90">
                 <CheckCircle className="w-5 h-5 mr-2 text-accent" />
-                <span>200+ proyectos exitosos</span>
+                <span>Gestión pública especializada</span>
               </div>
               <div className="flex items-center text-primary-foreground/90">
                 <CheckCircle className="w-5 h-5 mr-2 text-accent" />
-                <span>ROI promedio 300%</span>
+                <span>Transformación digital</span>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ const Hero = () => {
                   });
                 }}
               >
-                Consulta Gratuita
+                Solicitar Propuesta
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
               </Button>
               <Button 

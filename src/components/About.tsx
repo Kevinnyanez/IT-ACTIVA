@@ -5,23 +5,23 @@ const About = () => {
   const stats = [
     {
       icon: <Award className="w-8 h-8" />,
-      number: "15+",
+      number: "10+",
       label: "Años de Experiencia"
     },
     {
       icon: <Users2 className="w-8 h-8" />,
-      number: "200+",
-      label: "Proyectos Exitosos"
+      number: "100+",
+      label: "Proyectos Realizados"
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      number: "50+",
-      label: "Clientes Satisfechos"
+      number: "30+",
+      label: "Gobiernos Asesorados"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      number: "300%",
-      label: "ROI Promedio"
+      number: "95%",
+      label: "Satisfacción del Cliente"
     }
   ];
 
@@ -31,38 +31,38 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Sobre ConsulPro
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Somos una consultora líder especializada en transformación empresarial 
-              y estrategia de negocio. Con más de 15 años de experiencia, hemos ayudado 
-              a empresas de todos los tamaños a alcanzar sus objetivos y superar sus desafíos.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              Nuestro enfoque combina metodologías probadas con innovación tecnológica, 
-              garantizando resultados medibles y sostenibles en el tiempo. Creemos en 
-              la colaboración estrecha con nuestros clientes para crear soluciones 
-              personalizadas que generen valor real.
-            </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            Sobre IT ACTIVA
+          </h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            Somos una consultora especializada en comunicación y gestión pública, 
+            liderada por Ignacio Tonelli. Trabajamos con gobiernos locales, 
+            organizaciones políticas y empresas que buscan transformar su comunicación 
+            y optimizar su gestión pública.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8">
+            Nuestro enfoque combina estrategias de comunicación tradicionales con 
+            herramientas digitales innovadoras, incluyendo inteligencia artificial, 
+            para crear soluciones personalizadas que generen impacto real y medible.
+          </p>
 
-            {/* Mission & Vision */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Misión</h3>
-                <p className="text-muted-foreground">
-                  Impulsar el crecimiento y la excelencia operacional de nuestros clientes 
-                  a través de consultoría estratégica de clase mundial.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Visión</h3>
-                <p className="text-muted-foreground">
-                  Ser reconocidos como la consultora líder en transformación empresarial 
-                  en América Latina, creando valor sostenible para nuestros clientes.
-                </p>
-              </div>
+          {/* Mission & Vision */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Misión</h3>
+              <p className="text-muted-foreground">
+                Impulsar la transformación comunicacional y la excelencia en la gestión pública 
+                a través de estrategias innovadoras y personalizadas.
+              </p>
             </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Visión</h3>
+              <p className="text-muted-foreground">
+                Ser la consultora de referencia en comunicación y gestión pública, 
+                reconocida por nuestra capacidad de transformar realidades a través de la comunicación.
+              </p>
+            </div>
+          </div>
           </div>
 
           {/* Stats */}
@@ -94,27 +94,27 @@ const About = () => {
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Excelencia</h4>
+                    <h4 className="font-semibold text-foreground">Confianza</h4>
                     <p className="text-sm text-muted-foreground">
-                      Buscamos la perfección en cada proyecto que emprendemos.
+                      Construimos relaciones sólidas basadas en la transparencia y honestidad.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Integridad</h4>
+                    <h4 className="font-semibold text-foreground">Claridad</h4>
                     <p className="text-sm text-muted-foreground">
-                      Actuamos con transparencia y honestidad en todas nuestras relaciones.
+                      Comunicamos de manera clara y directa, facilitando la comprensión.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Innovación</h4>
+                    <h4 className="font-semibold text-foreground">Compromiso</h4>
                     <p className="text-sm text-muted-foreground">
-                      Adoptamos las mejores prácticas y tecnologías emergentes.
+                      Nos comprometemos al 100% con el éxito de cada proyecto.
                     </p>
                   </div>
                 </div>

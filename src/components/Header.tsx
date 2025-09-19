@@ -9,6 +9,7 @@ const Header = () => {
     { name: 'Inicio', href: '#hero' },
     { name: 'Servicios', href: '#services' },
     { name: 'Nosotros', href: '#about' },
+    { name: 'Metodología', href: '#methodology' },
     { name: 'Equipo', href: '#team' },
     { name: 'Testimonios', href: '#testimonials' },
     { name: 'Contacto', href: '#contact' },
@@ -21,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              ConsulPro
+              IT ACTIVA
             </h1>
           </div>
 

@@ -4,12 +4,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    "Estrategia Empresarial",
-    "Transformación Organizacional", 
-    "Innovación y Digitalización",
-    "Optimización de Procesos",
-    "Consultoría Financiera",
-    "Liderazgo Ejecutivo"
+    "Gestión Pública y Gobiernos Locales",
+    "Comunicación para Gobiernos Locales", 
+    "Comunicación Política y Análisis",
+    "Discurso e Imagen Pública",
+    "Estrategias Digitales con IA",
+    "Storytelling y Storydoing"
   ];
 
   const quickLinks = [
@@ -34,11 +34,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-4">
-              ConsulPro
+              IT ACTIVA
             </h3>
             <p className="text-background/80 mb-6 leading-relaxed">
-              Transformamos empresas a través de consultoría estratégica 
-              de clase mundial, impulsando el crecimiento y la excelencia operacional.
+              Consultoría especializada en comunicación y gestión pública. 
+              Transformamos la realidad a través de estrategias innovadoras y personalizadas.
             </p>
             
             {/* Contact Info */}
@@ -58,7 +58,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3 text-accent" />
                 <span className="text-background/80 text-sm">
-                  info@consulpro.com
+                  info@itactiva.com
                 </span>
               </div>
             </div>
@@ -149,7 +149,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-background/60 text-sm mb-4 md:mb-0">
-              © {currentYear} ConsulPro. Todos los derechos reservados.
+              © {currentYear} IT ACTIVA. Todos los derechos reservados.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-background/60 hover:text-accent transition-smooth">

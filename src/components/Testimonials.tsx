@@ -4,26 +4,26 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Elena Martínez",
-      role: "CEO, TechCorp Solutions",
-      company: "TechCorp Solutions",
-      content: "ConsulPro transformó completamente nuestra organización. Su enfoque estratégico y metodología probada nos ayudó a aumentar nuestra eficiencia en un 40% en solo 6 meses.",
+      name: "María González",
+      role: "Intendente Municipal",
+      company: "Municipio de San Martín",
+      content: "IT ACTIVA transformó completamente nuestra comunicación institucional. Las estrategias implementadas nos permitieron conectar mejor con los ciudadanos y mejorar significativamente nuestra imagen pública.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=150&h=150&fit=crop&crop=face"
     },
     {
-      name: "Miguel Fernández",
-      role: "Director General, InnovaGroup",
-      company: "InnovaGroup",
-      content: "La experiencia con ConsulPro fue excepcional. Su equipo nos guió através de una transformación digital compleja con resultados que superaron nuestras expectativas.",
+      name: "Carlos Mendoza",
+      role: "Secretario de Comunicación",
+      company: "Gobierno Provincial",
+      content: "El trabajo de Ignacio y su equipo fue excepcional. Nos ayudaron a implementar herramientas digitales que revolucionaron nuestra forma de comunicar políticas públicas.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
     },
     {
-      name: "Laura Jiménez",
-      role: "Fundadora, StartupXYZ",
-      company: "StartupXYZ",
-      content: "Como startup, necesitábamos orientación estratégica clara. ConsulPro nos proporcionó las herramientas y conocimientos necesarios para escalar nuestro negocio exitosamente.",
+      name: "Ana Rodríguez",
+      role: "Directora de Comunicación",
+      company: "Movimiento Político Regional",
+      content: "Como organización política, necesitábamos un enfoque estratégico claro. IT ACTIVA nos proporcionó las herramientas y conocimientos para posicionarnos efectivamente en el territorio.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop&crop=face"
     }
@@ -38,7 +38,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             La confianza de nuestros clientes es nuestro mayor logro. 
-            Conoce sus experiencias trabajando con ConsulPro.
+            Conoce las experiencias de gobiernos y organizaciones que trabajaron con IT ACTIVA.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ const Testimonials = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
               <div className="text-muted-foreground">Satisfacción del Cliente</div>
             </div>
             <div>
@@ -99,8 +99,8 @@ const Testimonials = () => {
               <div className="text-muted-foreground">Calificación Promedio</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">95%</div>
-              <div className="text-muted-foreground">Clientes que Repiten</div>
+              <div className="text-3xl font-bold text-primary mb-2">90%</div>
+              <div className="text-muted-foreground">Clientes que Continúan</div>
             </div>
           </div>
         </div>
