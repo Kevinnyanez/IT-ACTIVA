@@ -17,23 +17,31 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 225 15% 20%;
 
-    /* IT ACTIVA design tokens - Comunicación y Gestión Pública */
-    --primary: 200 45% 25%;
+/* IT ACTIVA design tokens - Clean institutional design */
+    --primary: 205 85% 32%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 16% 93%;
-    --secondary-foreground: 200 45% 25%;
+    --secondary: 205 20% 94%;
+    --secondary-foreground: 205 85% 32%;
 
-    --accent: 32 95% 60%;
-    --accent-foreground: 200 45% 25%;
+    --accent: 205 85% 32%;
+    --accent-foreground: 0 0% 98%;
 
-    /* Custom design tokens for IT ACTIVA */
-    --gradient-primary: linear-gradient(135deg, hsl(200 45% 25%), hsl(200 45% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(200 45% 25%) 0%, hsl(200 45% 35%) 50%, hsl(32 95% 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(32 95% 60%), hsl(32 95% 70%));
-    --shadow-soft: 0 4px 6px -1px hsl(200 45% 25% / 0.1), 0 2px 4px -2px hsl(200 45% 25% / 0.1);
-    --shadow-medium: 0 10px 15px -3px hsl(200 45% 25% / 0.1), 0 4px 6px -4px hsl(200 45% 25% / 0.1);
-    --shadow-large: 0 20px 25px -5px hsl(200 45% 25% / 0.1), 0 8px 10px -6px hsl(200 45% 25% / 0.1);
+    --muted: 205 10% 96%;
+    --muted-foreground: 205 25% 45%;
+
+    --border: 205 15% 90%;
+    --input: 205 15% 90%;
+    --ring: 205 85% 32%;
+
+    /* Clean institutional design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(205 85% 32%), hsl(205 85% 42%));
+    --gradient-hero: linear-gradient(135deg, hsl(205 85% 32%) 0%, hsl(205 75% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(205 85% 32%), hsl(205 85% 42%));
+    --shadow-soft: 0 1px 3px 0 hsl(205 85% 32% / 0.1), 0 1px 2px -1px hsl(205 85% 32% / 0.1);
+    --shadow-medium: 0 4px 6px -1px hsl(205 85% 32% / 0.1), 0 2px 4px -2px hsl(205 85% 32% / 0.1);
+    --shadow-large: 0 10px 15px -3px hsl(205 85% 32% / 0.1), 0 4px 6px -4px hsl(205 85% 32% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
