@@ -6,13 +6,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Nosotros', href: '#about' },
-    { name: 'Metodología', href: '#methodology' },
-    { name: 'Equipo', href: '#team' },
-    { name: 'Testimonios', href: '#testimonials' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Inicio', href: '/' },
+    { name: 'Servicios', href: '/servicios' },
+    { name: 'Nosotros', href: '/nosotros' },
+    { name: 'Contacto', href: '/contacto' },
   ];
 
   return (
@@ -34,12 +31,6 @@ const Header = () => {
                   <a
                     href={item.href}
                     className="text-foreground hover:text-primary transition-smooth font-medium"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.querySelector(item.href)?.scrollIntoView({
-                        behavior: 'smooth'
-                      });
-                    }}
                   >
                     {item.name}
                   </a>
@@ -52,13 +43,10 @@ const Header = () => {
           <div className="hidden md:block">
             <Button 
               className="bg-gradient-accent text-accent-foreground hover:opacity-90 shadow-soft"
-              onClick={() => {
-                document.querySelector('#contact')?.scrollIntoView({
-                  behavior: 'smooth'
-                });
-              }}
             >
-              Consulta Gratuita
+              <a href="/contacto">
+                Consulta Gratuita
+              </a>
             </Button>
           </div>
 
@@ -82,13 +70,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsMenuOpen(false);
-                    document.querySelector(item.href)?.scrollIntoView({
-                      behavior: 'smooth'
-                    });
-                  }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
@@ -96,14 +78,11 @@ const Header = () => {
               <div className="px-3 py-2">
                 <Button 
                   className="w-full bg-gradient-accent text-accent-foreground hover:opacity-90"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    document.querySelector('#contact')?.scrollIntoView({
-                      behavior: 'smooth'
-                    });
-                  }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  Consulta Gratuita
+                  <a href="/contacto">
+                    Consulta Gratuita
+                  </a>
                 </Button>
               </div>
             </div>
