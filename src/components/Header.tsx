@@ -1,15 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const navigation = [
     { name: 'Inicio', href: '/' },
-    { name: 'Servicios', href: '/servicios' },
     { name: 'Nosotros', href: '/nosotros' },
     { name: 'Contacto', href: '/contacto' },
+  ];
+
+  const services = [
+    { name: 'Gestión Pública y Gobiernos Locales', href: '/servicios/gestion-publica' },
+    { name: 'Comunicación para Gobiernos Locales', href: '/servicios/comunicacion-gobiernos' },
+    { name: 'Comunicación Política y Análisis', href: '/servicios/comunicacion-politica' },
+    { name: 'Discurso e Imagen Pública', href: '/servicios/discurso-imagen' },
   ];
 
   return (
@@ -28,14 +50,42 @@ const Header = () => {
             <ul className="flex items-center space-x-8">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="text-foreground hover:text-primary transition-smooth font-medium"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
+              
+              {/* Services Dropdown */}
+              <li className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center text-foreground hover:text-primary transition-smooth font-medium"
+                >
+                  Servicios
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-lg z-50">
+                    <div className="py-2">
+                      {services.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          className="block px-4 py-3 text-sm text-foreground hover:bg-secondary/50 hover:text-primary transition-smooth"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </li>
             </ul>
           </nav>
 
@@ -44,9 +94,9 @@ const Header = () => {
             <Button 
               className="bg-gradient-accent text-accent-foreground hover:opacity-90 shadow-soft"
             >
-              <a href="/contacto">
+              <Link to="/contacto">
                 Consulta Gratuita
-              </a>
+              </Link>
             </Button>
           </div>
 
@@ -66,23 +116,39 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-card border-t border-border">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="block px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
+              
+              {/* Services in mobile */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-muted-foreground mb-2">Servicios:</div>
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth ml-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+              
               <div className="px-3 py-2">
                 <Button 
                   className="w-full bg-gradient-accent text-accent-foreground hover:opacity-90"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <a href="/contacto">
+                  <Link to="/contacto">
                     Consulta Gratuita
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

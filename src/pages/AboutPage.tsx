@@ -116,12 +116,12 @@ const AboutPage = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                   Nuestra Historia
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                   IT ACTIVA nació de la visión de transformar la comunicación en el sector público. 
                   Trabajamos con gobiernos locales, organizaciones políticas y empresas que buscan 
                   optimizar su gestión pública y fortalecer su comunicación estratégica.
                 </p>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Nuestro enfoque combina metodologías tradicionales de consultoría con 
                   herramientas digitales innovadoras, incluyendo inteligencia artificial, 
                   para crear soluciones personalizadas que generen impacto real y medible.
@@ -130,8 +130,8 @@ const AboutPage = () => {
                 <div className="grid grid-cols-2 gap-8 mb-8">
                   {stats.slice(0, 2).map((stat, index) => (
                     <div key={index} className="text-center p-6 bg-muted/50 rounded-xl">
-                      <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                      <div className="text-muted-foreground font-medium">{stat.label}</div>
+                      <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                      <div className="text-muted-foreground font-medium text-lg">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -143,13 +143,13 @@ const AboutPage = () => {
                     <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                       <span className="text-primary-foreground font-bold text-2xl">IA</span>
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Consultora Especializada</h3>
-                    <p className="text-muted-foreground">Transformando la gestión pública</p>
+                    <h3 className="text-2xl font-semibold text-foreground mb-4">Consultora Especializada</h3>
+                    <p className="text-muted-foreground text-lg">Transformando la gestión pública</p>
                     <div className="grid grid-cols-2 gap-4 mt-8">
                       {stats.slice(2, 4).map((stat, index) => (
                         <div key={index} className="text-center p-4 bg-background rounded-lg">
-                          <div className="text-2xl font-bold text-primary mb-1">{stat.number}</div>
-                          <div className="text-xs text-muted-foreground">{stat.label}</div>
+                          <div className="text-3xl font-bold text-primary mb-1">{stat.number}</div>
+                          <div className="text-sm text-muted-foreground">{stat.label}</div>
                         </div>
                       ))}
                     </div>
@@ -160,31 +160,81 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Mission & Vision */}
+        {/* Mission, Vision & Objectives */}
         <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <Card className="p-8 bg-card border border-border">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Misión, Visión y Objetivos
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Los pilares fundamentales que definen nuestra identidad y dirección estratégica
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <Card className="p-8 bg-card border border-border hover:shadow-medium transition-all duration-300">
                 <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Misión</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Impulsar la transformación comunicacional y la excelencia en la gestión pública 
-                    a través de estrategias innovadoras y personalizadas que conecten gobiernos con ciudadanos, 
-                    fortaleciendo la democracia y la transparencia.
+                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mx-auto mb-6">
+                    <span className="text-2xl font-bold">M</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Misión</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center text-lg">
+                    Ofrecer servicios acorde a la necesidad de un mundo en constante dinámica de cada institución, 
+                    empresa u organización con la intención de mejorar su desempeño y fortalecer la relación con 
+                    la comunidad en el ámbito que se desarrolle.
                   </p>
                 </CardContent>
               </Card>
               
-              <Card className="p-8 bg-card border border-border">
+              <Card className="p-8 bg-card border border-border hover:shadow-medium transition-all duration-300">
                 <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Visión</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Ser la consultora de referencia en comunicación y gestión pública en América Latina, 
-                    reconocida por nuestra capacidad de transformar realidades a través de la comunicación 
-                    estratégica y la innovación tecnológica.
+                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mx-auto mb-6">
+                    <span className="text-2xl font-bold">V</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Visión</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center text-lg">
+                    Adaptarse a un universo en constante cambio en el desarrollo de la comunicación en convergencia 
+                    con las distintas herramientas que acompañan la presencia activa en el universo digital presente y futuro.
                   </p>
                 </CardContent>
               </Card>
+
+              <Card className="p-8 bg-card border border-border hover:shadow-medium transition-all duration-300">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mx-auto mb-6">
+                    <span className="text-2xl font-bold">O</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Objetivo</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center text-lg">
+                    Ser una fuente confiable de asesoramiento, consultoría y propositiva en relación a las demandas 
+                    del cliente en temas de comunicación, gestión de gobierno y relaciones con la comunidad.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Explanation Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+              <div className="bg-background/50 rounded-xl p-6 border border-border">
+                <h4 className="text-lg font-semibold text-foreground mb-3">
+                  ¿Qué es la misión de una empresa?
+                </h4>
+                <p className="text-muted-foreground text-base leading-relaxed">
+                  La misión de una empresa declara el propósito, responde a la pregunta ¿por qué existe la empresa? 
+                  Generalmente incluye una descripción general de la organización, su función y objetivos.
+                </p>
+              </div>
+              
+              <div className="bg-background/50 rounded-xl p-6 border border-border">
+                <h4 className="text-lg font-semibold text-foreground mb-3">
+                  ¿Qué es la visión de una empresa?
+                </h4>
+                <p className="text-muted-foreground text-base leading-relaxed">
+                  La visión de una empresa describe hacia dónde se dirige la empresa, responde a la pregunta 
+                  ¿qué será de la empresa en el futuro?
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -209,7 +259,7 @@ const AboutPage = () => {
                       <CheckCircle2 className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
                       <h4 className="font-semibold text-foreground text-lg">{value.title}</h4>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-base leading-relaxed">
                       {value.description}
                     </p>
                   </CardContent>
@@ -242,7 +292,7 @@ const AboutPage = () => {
                         <CardContent className="p-0">
                           <div className="text-sm font-semibold text-primary mb-2">{milestone.year}</div>
                           <h4 className="font-bold text-foreground mb-2">{milestone.title}</h4>
-                          <p className="text-muted-foreground text-sm">{milestone.description}</p>
+                          <p className="text-muted-foreground text-base">{milestone.description}</p>
                         </CardContent>
                       </Card>
                     </div>
