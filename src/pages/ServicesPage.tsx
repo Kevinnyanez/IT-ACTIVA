@@ -1,22 +1,56 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Building2, MessageSquare, Users, Megaphone, BarChart3, Globe, Lightbulb, Target, ArrowLeft } from 'lucide-react';
+import { Building2, MessageSquare, Users, Megaphone, BarChart3, Globe, Lightbulb, Target, ArrowLeft, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const ServicesPage = () => {
+  const [showAllServices, setShowAllServices] = useState(false);
+  
   const serviceCategories = [
     {
       icon: <Building2 className="w-8 h-8" />,
       title: "Gestión Pública y Gobiernos Locales",
       description: "Asesoramiento integral en programas, políticas públicas y modernización del Estado.",
       services: [
-        "Informes de Gestión y Seguimiento de Metas",
-        "Diseño, Análisis y Monitoreo de Políticas Públicas", 
-        "Internacionalización de la Gestión e Implementación de los ODS",
-        "Estrategias Digitales y Políticas de Modernización",
-        "Participación Ciudadana y Presupuestos Participativos"
+        {
+          name: "Informes de Gestión y Seguimiento de Metas",
+          description: "Elaboración de reportes estratégicos para medir avances en la gestión pública, optimizando la planificación de políticas y programas en función de resultados concretos."
+        },
+        {
+          name: "Asesoramiento Integral en Programas y Proyectos de Gestión",
+          description: "Diseño e implementación de proyectos y políticas públicas, mediante diagnósticos claves, asegurando su alineación con las prioridades gubernamentales y el desarrollo sostenible."
+        },
+        {
+          name: "Diseño, Análisis y Monitoreo de Políticas Públicas",
+          description: "Formulación de políticas públicas basadas en evidencia, con análisis de impacto y mecanismos de monitoreo continuo para asegurar su efectividad en el territorio."
+        },
+        {
+          name: "Articulación y Desarrollo Legislativo para Gobiernos",
+          description: "Asesoramiento técnico-político para la elaboración de marcos normativos, fortaleciendo la articulación entre los poderes Ejecutivo y Legislativo en los distintos niveles de gobierno."
+        },
+        {
+          name: "Internacionalización de la Gestión e Implementación de los ODS",
+          description: "Desarrollo de estrategias para alinear las políticas locales a estándares internacionales, promoviendo la adopción de los Objetivos de Desarrollo Sostenible como eje transversal en la gestión pública."
+        },
+        {
+          name: "Estrategias Digitales y Políticas de Modernización",
+          description: "Asesoramiento en herramientas digitales y políticas innovadoras que potencien la eficiencia en la administración pública y fortalezcan la relación con la ciudadanía."
+        },
+        {
+          name: "Participación Ciudadana e Implementación de Presupuestos Participativos",
+          description: "Promoción de mecanismos de democracia participativa para incluir las voces de los ciudadanos en la toma de decisiones y la asignación de recursos públicos."
+        },
+        {
+          name: "Fortalecimiento de las Relaciones Interjurisdiccionales",
+          description: "Diseño de estrategias para fomentar la cooperación entre municipios, provincias y la Nación, garantizando una gestión coordinada y eficiente."
+        },
+        {
+          name: "Políticas de Educación Superior, Juventud y Proyectos Especiales",
+          description: "Creación de programas que integren a las universidades, centros de formación y jóvenes en proyectos que fortalezcan el desarrollo local y regional."
+        }
       ]
     },
     {
@@ -24,11 +58,30 @@ const ServicesPage = () => {
       title: "Comunicación para Gobiernos Locales",
       description: "Estrategias comunicacionales especializadas para la gestión pública local.",
       services: [
-        "Análisis de Coyuntura y Clipping de Prensa",
-        "Desarrollo de Estrategias de Comunicación para Dirigentes",
-        "Fortalecimiento de la Marca Ciudad y Desarrollo Local",
-        "Comunicación Interna para Equipos de Trabajo",
-        "Periodismo de Ciudades"
+        {
+          name: "Análisis de Coyuntura y Clipping de Prensa Actualizado",
+          description: "Monitoreo de medios y análisis de contexto para identificar tendencias y oportunidades para la gestión local."
+        },
+        {
+          name: "Desarrollo de Estrategias de Comunicación para Dirigentes",
+          description: "Diseño de planes de comunicación personalizados para líderes locales que refuercen el posicionamiento de los dirigentes en sus comunidades y sectores claves."
+        },
+        {
+          name: "Asesoramiento en Comunicación Política",
+          description: "Optimización de estrategias discursivas y mediáticas para campañas electorales y gestión de gobierno, fortaleciendo el vínculo con la ciudadanía."
+        },
+        {
+          name: "Fortalecimiento de la Marca Ciudad y Desarrollo Local",
+          description: "Impulso de estrategias para consolidar la identidad local y posicionar a la ciudad como un destino atractivo para inversiones, turismo y desarrollo cultural."
+        },
+        {
+          name: "Comunicación Interna para Equipos de Trabajo",
+          description: "Diseño de canales internos y dinámicas comunicacionales que potencien la coordinación y el rendimiento de los equipos en la gestión pública."
+        },
+        {
+          name: "Periodismo de Ciudades",
+          description: "Producción de contenidos que destaquen los logros de la gestión local y refuercen la identidad colectiva en torno a los proyectos en ejecución."
+        }
       ]
     },
     {
@@ -36,11 +89,30 @@ const ServicesPage = () => {
       title: "Comunicación Política y Análisis",
       description: "Estrategias digitales, gestión de contenidos y análisis político especializado.",
       services: [
-        "Estrategia de Comunicación y Creación de Contenidos",
-        "Estrategias Digitales y Gestión de Social Media",
-        "Coordinación y Desarrollo de Producciones Audiovisuales",
-        "Identificación de Públicos y Audiencias",
-        "Gestión y Comunicación de Crisis"
+        {
+          name: "Estrategia de Comunicación y Creación de Contenidos",
+          description: "Elaboración de mensajes claros y consistentes para maximizar el impacto comunicacional en campañas y gestión de gobierno."
+        },
+        {
+          name: "Clipping de Prensa, Notas y Artículos",
+          description: "Seguimiento y elaboración de contenido en medios locales y nacionales para consolidar la imagen de la gestión y de los referentes políticos."
+        },
+        {
+          name: "Estrategias Digitales y Gestión de Social Media",
+          description: "Planificación y ejecución de campañas en redes sociales, posicionando la gestión pública o electoral como cercana, innovadora y transparente."
+        },
+        {
+          name: "Coordinación y Desarrollo de Producciones Audiovisuales",
+          description: "Desarrollo de videos e imágenes institucionales que refuercen los logros y objetivos de la gestión pública, alineados al discurso oficial."
+        },
+        {
+          name: "Identificación de Públicos y Audiencias",
+          description: "Análisis detallado de segmentos clave para optimizar el alcance y efectividad de las estrategias comunicacionales."
+        },
+        {
+          name: "Gestión y Comunicación de Crisis",
+          description: "Desarrollo de protocolos y estrategias para el manejo efectivo de situaciones críticas que puedan afectar la imagen institucional."
+        }
       ]
     },
     {
@@ -48,11 +120,26 @@ const ServicesPage = () => {
       title: "Discurso e Imagen Pública",
       description: "Construcción de imagen institucional, oratoria y posicionamiento público.",
       services: [
-        "Desarrollo de Imagen Institucional",
-        "Posicionamiento y Manejo del Discurso Público",
-        "Desarrollo de Encuestas de Opinión",
-        "Debate Electoral: Puntos Clave y Coaching",
-        "Oratoria para Conectar con tu Público"
+        {
+          name: "Desarrollo de Imagen Institucional",
+          description: "Construcción y fortalecimiento de la identidad visual y comunicacional de instituciones públicas y líderes políticos."
+        },
+        {
+          name: "Posicionamiento y Manejo del Discurso Público",
+          description: "Desarrollo de estrategias discursivas coherentes que refuercen el liderazgo y la credibilidad ante diversos públicos."
+        },
+        {
+          name: "Desarrollo de Encuestas de Opinión",
+          description: "Diseño y análisis de estudios de opinión pública para medir percepción ciudadana y orientar estrategias comunicacionales."
+        },
+        {
+          name: "Debate Electoral: Puntos Clave y Coaching",
+          description: "Preparación integral para debates políticos, incluyendo argumentación, manejo escénico y estrategias de comunicación efectiva."
+        },
+        {
+          name: "Oratoria para Conectar con tu Público",
+          description: "Técnicas de comunicación oral para líderes políticos, enfocadas en generar conexión emocional y transmitir mensajes de manera impactante."
+        }
       ]
     }
   ];
@@ -131,14 +218,47 @@ const ServicesPage = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-3 mb-6">
-                      {category.services.map((service, serviceIndex) => (
-                        <li key={serviceIndex} className="flex items-start text-sm text-muted-foreground">
-                          <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                          <span>{service}</span>
-                        </li>
+                    <div className="space-y-4 mb-6">
+                      {category.services.slice(0, showAllServices ? category.services.length : 3).map((service, serviceIndex) => (
+                        <div key={serviceIndex} className="border-l-2 border-primary/20 pl-4">
+                          <h4 className="font-medium text-foreground text-sm mb-1">
+                            {service.name}
+                          </h4>
+                          <p className="text-xs text-muted-foreground leading-relaxed">
+                            {service.description}
+                          </p>
+                        </div>
                       ))}
-                    </ul>
+                      
+                      {!showAllServices && category.services.length > 3 && (
+                        <div className="text-center pt-2">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setShowAllServices(true)}
+                            className="text-primary hover:text-primary hover:bg-primary/10"
+                          >
+                            <ChevronDown className="w-4 h-4 mr-2" />
+                            Ver más servicios ({category.services.length - 3} más)
+                          </Button>
+                        </div>
+                      )}
+                      
+                      {showAllServices && category.services.length > 3 && (
+                        <div className="text-center pt-2">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setShowAllServices(false)}
+                            className="text-primary hover:text-primary hover:bg-primary/10"
+                          >
+                            <ChevronUp className="w-4 h-4 mr-2" />
+                            Ver menos
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                    
                     <Button 
                       variant="outline" 
                       className="w-full hover:bg-primary hover:text-primary-foreground border-primary text-primary"
