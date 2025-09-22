@@ -221,24 +221,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* CTA Section */}
-            <Card className="bg-gradient-primary text-primary-foreground">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">
-                  ¿Necesitas una Respuesta Rápida?
-                </h3>
-                <p className="mb-6 opacity-90">
-                  Para consultas urgentes, llámanos directamente y habla 
-                  con uno de nuestros especialistas.
-                </p>
-                <Button 
-                  variant="secondary"
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                >
-                  Llamar Ahora
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

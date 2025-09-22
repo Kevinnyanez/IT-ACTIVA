@@ -168,30 +168,6 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="bg-gradient-primary text-primary-foreground max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
-                ¿Querés conocer más sobre nuestro enfoque?
-              </h3>
-              <p className="mb-6 opacity-90">
-                Conversemos sobre cómo podemos ayudarte a transformar 
-                tu comunicación y optimizar tu gestión.
-              </p>
-              <button 
-                className="bg-primary-foreground text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-smooth"
-                onClick={() => {
-                  document.querySelector('#contact')?.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }}
-              >
-                Solicitar Reunión
-              </button>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

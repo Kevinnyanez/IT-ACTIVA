@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import heroImage from '@/assets/hero-consulting.jpg';
 
 const Hero = () => {
   return (
@@ -8,11 +7,11 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
-          alt="Consultoría profesional" 
+          src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop&crop=center&auto=format" 
+          alt="Ciudad moderna y gestión pública" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/65 to-primary/45"></div>
       </div>
 
       {/* Content */}

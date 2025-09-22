@@ -4,10 +4,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Clock, ArrowLeft, Send } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageHero from '@/components/PageHero';
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -88,28 +88,18 @@ const ContactPage = () => {
     <div className="min-h-screen">
       <Header />
       
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-24 bg-primary">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Volver al inicio
-              </Link>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Contacto
-              </h1>
-              <h2 className="text-2xl font-semibold mb-4 text-primary-foreground/90">
-                Nos interesa ayudarte
-              </h2>
-              <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-                Déjanos tus datos para conectar juntos y transformar tu gestión pública. 
-                Estamos aquí para escucharte y diseñar la solución perfecta para tu organización.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main>
+        <PageHero
+          title="Contacto"
+          subtitle="Nos interesa ayudarte"
+          description="Déjanos tus datos para conectar juntos y transformar tu gestión pública. Estamos aquí para escucharte y diseñar la solución perfecta para tu organización."
+          ctaText="Enviar Mensaje"
+          ctaAction={() => {
+            document.querySelector('#contact-form')?.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }}
+        />
 
         {/* Contact Form & Info */}
         <section className="py-24 bg-background">

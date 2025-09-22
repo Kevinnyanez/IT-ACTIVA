@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Building2, MessageSquare, BarChart3, Megaphone, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Building2, MessageSquare, BarChart3, Megaphone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageHero from '@/components/PageHero';
 
 const ServicesPage = () => {
   const serviceCategories = [
@@ -61,25 +62,17 @@ const ServicesPage = () => {
     <div className="min-h-screen">
       <Header />
       
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-24 bg-gradient-hero">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Volver al inicio
-              </Link>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Nuestros Servicios
-              </h1>
-              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-                Especializados en consultoría de comunicación y gestión pública, 
-                ofrecemos soluciones integrales para gobiernos locales y organizaciones políticas.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main>
+        <PageHero
+          title="Nuestros Servicios"
+          description="Especializados en consultoría de comunicación y gestión pública, ofrecemos soluciones integrales para gobiernos locales y organizaciones políticas."
+          ctaText="Ver Servicios Detallados"
+          ctaAction={() => {
+            document.querySelector('#services-navigation')?.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }}
+        />
 
         {/* Services Navigation */}
         <section className="py-24 bg-background">

@@ -1,9 +1,9 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Award, Globe, Users2, TrendingUp, ArrowLeft, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Award, Globe, Users2, TrendingUp, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageHero from '@/components/PageHero';
 
 const AboutPage = () => {
   const stats = [
@@ -88,25 +88,15 @@ const AboutPage = () => {
     <div className="min-h-screen">
       <Header />
       
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-24 bg-gradient-hero">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Volver al inicio
-              </Link>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Sobre IT ACTIVA
-              </h1>
-              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-                Somos una consultora especializada en comunicación y gestión pública, 
-                liderada por Ignacio Tonelli, con más de una década transformando organizaciones.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main>
+        <PageHero
+          title="Sobre IT ACTIVA"
+          description="Somos una consultora especializada en comunicación y gestión pública, liderada por Ignacio Tonelli, con más de una década transformando organizaciones."
+          ctaText="Conocer Nuestros Servicios"
+          ctaAction={() => {
+            window.location.href = '/servicios';
+          }}
+        />
 
         {/* About Content */}
         <section className="py-24 bg-background">

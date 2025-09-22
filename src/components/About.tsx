@@ -46,6 +46,25 @@ const About = () => {
             para crear soluciones personalizadas que generen impacto real y medible.
           </p>
 
+          {/* Propuesta de Valor */}
+          <div className="bg-primary/5 rounded-lg p-6 mb-8">
+            <p className="text-lg text-foreground leading-relaxed mb-4">
+              <strong className="text-primary">IT ACTIVA</strong> propone un trabajo colaborativo donde las definiciones se construyan en conjunto, 
+              con el objetivo de generar una dinámica de comunicación fluida, transparente y de alto impacto hacia la comunidad.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed mb-4">
+              Proponemos que nuestros servicios desarrollen, impulsen y potencien las capacidades y condiciones de nuestros clientes, 
+              para consolidar una visión clara, de impacto positivo en las acciones y en la imagen que proyecta.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed mb-4">
+              La comunicación produce sentidos, transmite emociones y construye identidad, la gestión transforma la realidad. 
+              Juntas, desarrollan historias positivas en la comunidad.
+            </p>
+            <p className="text-lg font-semibold text-primary">
+              Te invitamos a conocer nuestras propuestas y descubrir cómo podemos ayudarte a alcanzar tus objetivos.
+            </p>
+          </div>
+
           {/* Mission & Vision */}
           <div className="space-y-6">
             <div>

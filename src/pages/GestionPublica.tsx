@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Building2, ArrowLeft, CheckCircle, Target, Users, Globe } from 'lucide-react';
+import { Building2, CheckCircle, Target, Users, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageHero from '@/components/PageHero';
 
 const GestionPublica = () => {
   const services = [
