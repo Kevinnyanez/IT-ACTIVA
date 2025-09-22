@@ -1,31 +1,39 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Award, Globe, Users2, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { CheckCircle, Target, Lightbulb, BarChart3, HandHeart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
 
 const AboutPage = () => {
-  const stats = [
+  const successSteps = [
     {
-      icon: <Award className="w-8 h-8" />,
-      number: "10+",
-      label: "Años de Experiencia"
+      number: "01",
+      title: "Diagnóstico Colaborativo",
+      description: "Análisis profundo de la situación actual, identificando fortalezas, oportunidades y desafíos específicos de tu organización.",
+      icon: <Target className="w-6 h-6" />
     },
     {
-      icon: <Users2 className="w-8 h-8" />,
-      number: "100+",
-      label: "Proyectos Realizados"
+      number: "02", 
+      title: "Propuesta Personalizada",
+      description: "Diseño de estrategias a medida basadas en el diagnóstico, con objetivos claros y metodologías probadas.",
+      icon: <Lightbulb className="w-6 h-6" />
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      number: "30+",
-      label: "Gobiernos Asesorados"
+      number: "03",
+      title: "Implementación Digital/IA",
+      description: "Ejecución de la estrategia utilizando herramientas digitales avanzadas e inteligencia artificial para maximizar el impacto.",
+      icon: <BarChart3 className="w-6 h-6" />
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      number: "95%",
-      label: "Satisfacción del Cliente"
+      number: "04",
+      title: "Medición con KPIs",
+      description: "Monitoreo constante de resultados utilizando indicadores clave de rendimiento para asegurar el cumplimiento de objetivos.",
+      icon: <CheckCircle className="w-6 h-6" />
+    },
+    {
+      number: "05",
+      title: "Acompañamiento Continuo",
+      description: "Soporte permanente para ajustes, mejoras y nuevos desafíos que puedan surgir en el proceso.",
+      icon: <HandHeart className="w-6 h-6" />
     }
   ];
 
@@ -91,7 +99,7 @@ const AboutPage = () => {
       <main>
         <PageHero
           title="Sobre IT ACTIVA"
-          description="Somos una consultora especializada en comunicación y gestión pública, liderada por Ignacio Tonelli, con más de una década transformando organizaciones."
+          description="Más de 15 años transformando la comunicación y gestión pública. Liderados por Ignacio Tonelli, especialista en comunicación política y gestión gubernamental."
           ctaText="Conocer Nuestros Servicios"
           ctaAction={() => {
             window.location.href = '/servicios';
@@ -100,234 +108,168 @@ const AboutPage = () => {
 
         {/* About Content */}
         <section className="py-24 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Nuestra Historia
-                </h2>
-                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                  IT ACTIVA nació de la visión de transformar la comunicación en el sector público. 
-                  Trabajamos con gobiernos locales, organizaciones políticas y empresas que buscan 
-                  optimizar su gestión pública y fortalecer su comunicación estratégica.
-                </p>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Nuestro enfoque combina metodologías tradicionales de consultoría con 
-                  herramientas digitales innovadoras, incluyendo inteligencia artificial, 
-                  para crear soluciones personalizadas que generen impacto real y medible.
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Header Section */}
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <div className="mb-8">
+                <img 
+                  src="/ACTIVÁ Logo (1).png" 
+                  alt="IT ACTIVA Logo" 
+                  className="h-20 w-auto mx-auto"
+                />
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl font-light text-foreground mb-6 tracking-tight">
+                Consultora en Comunicación y Gestión Pública
+              </h2>
+              
+              <div className="w-20 h-0.5 bg-gray-400 mx-auto mb-8"></div>
+              
+              <h3 className="text-2xl font-medium text-primary mb-12">IT ACTIVA</h3>
+
+
+              {/* Descripción principal */}
+              <div className="space-y-8 mb-16">
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  IT Activa propone un trabajo colaborativo donde las definiciones se construyan en conjunto, 
+                  con el objetivo de generar una dinámica de comunicación fluida, transparente y de alto impacto hacia la comunidad.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-8 mb-8">
-                  {stats.slice(0, 2).map((stat, index) => (
-                    <div key={index} className="text-center p-6 bg-muted/50 rounded-xl">
-                      <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                      <div className="text-muted-foreground font-medium text-lg">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="relative">
-                <div className="bg-muted/50 rounded-2xl p-8 h-[500px] flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-primary-foreground font-bold text-2xl">IA</span>
-                    </div>
-                    <h3 className="text-2xl font-semibold text-foreground mb-4">Consultora Especializada</h3>
-                    <p className="text-muted-foreground text-lg">Transformando la gestión pública</p>
-                    <div className="grid grid-cols-2 gap-4 mt-8">
-                      {stats.slice(2, 4).map((stat, index) => (
-                        <div key={index} className="text-center p-4 bg-background rounded-lg">
-                          <div className="text-3xl font-bold text-primary mb-1">{stat.number}</div>
-                          <div className="text-sm text-muted-foreground">{stat.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission, Vision & Objectives */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Misión, Visión y Objetivos
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Los pilares fundamentales que definen nuestra identidad y dirección estratégica
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <Card className="p-8 bg-card border border-border hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mx-auto mb-6">
-                    <span className="text-2xl font-bold">M</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Misión</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center text-lg">
-                    Ofrecer servicios acorde a la necesidad de un mundo en constante dinámica de cada institución, 
-                    empresa u organización con la intención de mejorar su desempeño y fortalecer la relación con 
-                    la comunidad en el ámbito que se desarrolle.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="p-8 bg-card border border-border hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mx-auto mb-6">
-                    <span className="text-2xl font-bold">V</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Visión</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center text-lg">
-                    Adaptarse a un universo en constante cambio en el desarrollo de la comunicación en convergencia 
-                    con las distintas herramientas que acompañan la presencia activa en el universo digital presente y futuro.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-8 bg-card border border-border hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mx-auto mb-6">
-                    <span className="text-2xl font-bold">O</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Objetivo</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center text-lg">
-                    Ser una fuente confiable de asesoramiento, consultoría y propositiva en relación a las demandas 
-                    del cliente en temas de comunicación, gestión de gobierno y relaciones con la comunidad.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Explanation Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-              <div className="bg-background/50 rounded-xl p-6 border border-border">
-                <h4 className="text-lg font-semibold text-foreground mb-3">
-                  ¿Qué es la misión de una empresa?
-                </h4>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  La misión de una empresa declara el propósito, responde a la pregunta ¿por qué existe la empresa? 
-                  Generalmente incluye una descripción general de la organización, su función y objetivos.
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  Proponemos que nuestros servicios desarrollen, impulsen y potencien las capacidades y condiciones de nuestros clientes, 
+                  para consolidar una visión clara, de impacto positivo en las acciones y en la imagen que proyecta.
                 </p>
-              </div>
-              
-              <div className="bg-background/50 rounded-xl p-6 border border-border">
-                <h4 className="text-lg font-semibold text-foreground mb-3">
-                  ¿Qué es la visión de una empresa?
-                </h4>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  La visión de una empresa describe hacia dónde se dirige la empresa, responde a la pregunta 
-                  ¿qué será de la empresa en el futuro?
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Values */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Nuestros Valores
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Los principios que guían nuestro trabajo y definen nuestra cultura organizacional
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {values.map((value, index) => (
-                <Card key={index} className="p-6 hover:shadow-medium transition-all duration-300 border border-border bg-card">
-                  <CardContent className="p-0">
-                    <div className="flex items-start mb-4">
-                      <CheckCircle2 className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <h4 className="font-semibold text-foreground text-lg">{value.title}</h4>
-                    </div>
-                    <p className="text-muted-foreground text-base leading-relaxed">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Timeline */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Nuestra Trayectoria
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Un recorrido de crecimiento, innovación y compromiso con la excelencia
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/20"></div>
                 
-                {milestones.map((milestone, index) => (
-                  <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                    <div className={`w-full max-w-md ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                      <Card className="p-6 bg-card border border-border hover:shadow-medium transition-all duration-300">
-                        <CardContent className="p-0">
-                          <div className="text-sm font-semibold text-primary mb-2">{milestone.year}</div>
-                          <h4 className="font-bold text-foreground mb-2">{milestone.title}</h4>
-                          <p className="text-muted-foreground text-base">{milestone.description}</p>
-                        </CardContent>
-                      </Card>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  La comunicación produce sentidos, transmite emociones y construye identidad. La gestión transforma la realidad. 
+                  Juntas, desarrollan historias positivas en la comunidad.
+                </p>
+              </div>
+            </div>
+
+            {/* Leadership Section */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <div className="bg-white border border-gray-200 shadow-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                  {/* Photo Section */}
+                  <div className="lg:col-span-1 bg-gray-50 p-8 flex items-center justify-center">
+                    <div className="relative">
+                      <img
+                        src="/foto perfil IT (1).jpg"
+                        alt="Ignacio Tonelli"
+                        className="w-64 h-80 object-cover object-center shadow-lg"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="lg:col-span-2 p-10">
+                    <div className="mb-6">
+                      <h3 className="text-3xl font-light text-gray-900 mb-2 tracking-tight">
+                        Ignacio Tonelli
+                      </h3>
+                      
+                      <div className="w-12 h-0.5 bg-gray-400 mb-4"></div>
+                      
+                      <p className="text-gray-600 font-medium text-lg mb-6">
+                        Fundador y Director
+                      </p>
                     </div>
                     
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div className="mb-6">
+                      <p className="text-gray-700 text-base leading-relaxed mb-4">
+                        Soy Ignacio Tonelli, licenciado en Comunicación con más de 15 años de experiencia en consultoría y gestión pública. Me especializo en transformar la comunicación de gobiernos locales y organizaciones políticas a través de estrategias innovadoras y metodologías probadas.
+                      </p>
+                      <p className="text-gray-700 text-base leading-relaxed mb-4">
+                        He trabajado con más de 30 gobiernos locales, desarrollando proyectos de comunicación estratégica, gestión de políticas públicas y modernización institucional. Mi experiencia abarca desde ONGs hasta gobiernos municipales y provinciales.
+                      </p>
+                      <p className="text-gray-700 text-base leading-relaxed">
+                        Como consultor y docente, me enfoco en crear soluciones personalizadas que generen impacto real y medible en las comunidades. Creo firmemente en el poder transformador de la comunicación y la gestión pública para construir sociedades más transparentes y eficientes.
+                      </p>
+                    </div>
+
+                    {/* Specialties */}
+                    <div className="mb-6">
+                      <h4 className="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide">Especialidades</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {["Comunicación Política", "Gestión Pública", "Estrategias Digitales", "Políticas Públicas", "Consultoría", "Docencia"].map((specialty, index) => (
+                          <div 
+                            key={index}
+                            className="text-sm text-gray-600 border-l-2 border-gray-300 pl-3 py-1"
+                          >
+                            {specialty}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Success Steps Section */}
+            <div className="max-w-6xl mx-auto mb-20">
+              <div className="text-center mb-16">
+                <h3 className="text-3xl font-light text-foreground mb-4 tracking-tight">
+                  Nuestro Proceso para el Éxito
+                </h3>
+                <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-6"></div>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Un enfoque estructurado de 5 etapas que garantiza resultados medibles y sostenibles
+                </p>
+              </div>
+
+              <div className="space-y-8">
+                {successSteps.map((step, index) => (
+                  <div key={index} className="bg-white border border-gray-200 shadow-sm">
+                    <div className="p-8">
+                      <div className="flex items-start space-x-6">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-gray-100 flex items-center justify-center text-gray-600">
+                            {step.icon}
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center mb-3">
+                            <span className="text-sm font-medium text-gray-500 mr-4">{step.number}</span>
+                            <h4 className="text-xl font-medium text-gray-900">{step.title}</h4>
+                          </div>
+                          <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-24 bg-primary">
-          <div className="container mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-                ¿Listo para transformar tu organización?
-              </h2>
-              <p className="text-lg text-primary-foreground/90 mb-8">
-                Conoce cómo podemos ayudarte a optimizar tu comunicación y gestión pública
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                >
-                  <Link to="/contacto">
-                    Solicita una Consulta
-                  </Link>
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
-                >
-                  <Link to="/servicios">
+            {/* Cierre / invitación */}
+            <div className="max-w-4xl mx-auto mt-20">
+              <div className="bg-primary text-white p-12 text-center rounded-xl">
+                <h3 className="text-2xl font-medium mb-4">¿Listo para transformar tu organización?</h3>
+                <p className="text-lg text-white/90 leading-relaxed mb-6">
+                  Con nuestra experiencia y metodología probada, estamos preparados para ayudarte a alcanzar tus objetivos de comunicación y gestión pública.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button 
+                    onClick={() => window.location.href = '/contacto'}
+                    className="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                  >
+                    Solicitar Consulta
+                  </button>
+                  <button 
+                    onClick={() => window.location.href = '/servicios'}
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-colors"
+                  >
                     Ver Nuestros Servicios
-                  </Link>
-                </Button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
       </main>
 
       <Footer />

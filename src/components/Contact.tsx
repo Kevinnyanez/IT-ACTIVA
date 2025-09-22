@@ -50,22 +50,22 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Dirección",
-      content: "Av. Reforma 123, Piso 15\nCiudad de México, México"
+      content: "Coronel Pringles\nBuenos Aires, Argentina"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Teléfono",
-      content: "+52 55 1234 5678\n+52 55 8765 4321"
+      content: "+54 9 11 2286 6851"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      content: "info@consulpro.com\nventas@consulpro.com"
+      content: "agenciacc.activa@gmail.com"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Horarios",
-      content: "Lun - Vie: 9:00 - 18:00\nSáb: 9:00 - 14:00"
+      content: "Lun - Vie: 9:00 - 18:00\nConsultas por cita previa"
     }
   ];
 
@@ -143,7 +143,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+52 55 1234 5678"
+                      placeholder="+54 9 11 1234 5678"
                     />
                   </div>
                 </div>
@@ -159,12 +159,11 @@ const Contact = () => {
                     className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
                   >
                     <option value="">Selecciona un servicio</option>
-                    <option value="estrategia">Estrategia Empresarial</option>
-                    <option value="transformacion">Transformación Organizacional</option>
-                    <option value="innovacion">Innovación y Digitalización</option>
-                    <option value="procesos">Optimización de Procesos</option>
-                    <option value="financiera">Consultoría Financiera</option>
-                    <option value="liderazgo">Liderazgo Ejecutivo</option>
+                    <option value="gestion-publica">Gestión Pública y Gobiernos Locales</option>
+                    <option value="comunicacion-gobiernos">Comunicación para Gobiernos Locales</option>
+                    <option value="comunicacion-politica">Comunicación Política y Análisis</option>
+                    <option value="discurso-imagen">Discurso e Imagen Pública</option>
+                    <option value="consultoria-general">Consultoría General</option>
                   </select>
                 </div>
 
@@ -200,10 +199,10 @@ const Contact = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="bg-card hover:shadow-soft transition-smooth">
+                  <Card key={index} className="bg-card hover:shadow-soft transition-smooth rounded-xl">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground flex-shrink-0">
                           {info.icon}
                         </div>
                         <div>

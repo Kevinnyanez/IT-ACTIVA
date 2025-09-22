@@ -1,143 +1,48 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Award, Globe, Users2, TrendingUp } from 'lucide-react';
-
 const About = () => {
-  const stats = [
-    {
-      icon: <Award className="w-8 h-8" />,
-      number: "10+",
-      label: "Años de Experiencia"
-    },
-    {
-      icon: <Users2 className="w-8 h-8" />,
-      number: "100+",
-      label: "Proyectos Realizados"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      number: "30+",
-      label: "Gobiernos Asesorados"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      number: "95%",
-      label: "Satisfacción del Cliente"
-    }
-  ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
-          <div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Sobre IT ACTIVA
+    <section id="about" className="py-24 bg-background relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Header Section */}
+        <div className="max-w-4xl mx-auto text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-light text-foreground mb-6 tracking-tight">
+            Consultora en Comunicación y Gestión Pública
           </h2>
-          <p className="text-lg text-muted-foreground mb-6">
-            Somos una consultora especializada en comunicación y gestión pública, 
-            liderada por Ignacio Tonelli. Trabajamos con gobiernos locales, 
-            organizaciones políticas y empresas que buscan transformar su comunicación 
-            y optimizar su gestión pública.
-          </p>
-          <p className="text-lg text-muted-foreground mb-8">
-            Nuestro enfoque combina estrategias de comunicación tradicionales con 
-            herramientas digitales innovadoras, incluyendo inteligencia artificial, 
-            para crear soluciones personalizadas que generen impacto real y medible.
-          </p>
+          
+          <div className="w-20 h-0.5 bg-gray-400 mx-auto mb-8"></div>
+          
+          <h3 className="text-2xl font-medium text-primary mb-12">IT ACTIVA</h3>
 
-          {/* Propuesta de Valor */}
-          <div className="bg-primary/5 rounded-lg p-6 mb-8">
-            <p className="text-lg text-foreground leading-relaxed mb-4">
-              <strong className="text-primary">IT ACTIVA</strong> propone un trabajo colaborativo donde las definiciones se construyan en conjunto, 
-              con el objetivo de generar una dinámica de comunicación fluida, transparente y de alto impacto hacia la comunidad.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed mb-4">
-              Proponemos que nuestros servicios desarrollen, impulsen y potencien las capacidades y condiciones de nuestros clientes, 
-              para consolidar una visión clara, de impacto positivo en las acciones y en la imagen que proyecta.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed mb-4">
-              La comunicación produce sentidos, transmite emociones y construye identidad, la gestión transforma la realidad. 
-              Juntas, desarrollan historias positivas en la comunidad.
-            </p>
-            <p className="text-lg font-semibold text-primary">
-              Te invitamos a conocer nuestras propuestas y descubrir cómo podemos ayudarte a alcanzar tus objetivos.
-            </p>
-          </div>
-
-          {/* Mission & Vision */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Misión</h3>
-              <p className="text-muted-foreground">
-                Impulsar la transformación comunicacional y la excelencia en la gestión pública 
-                a través de estrategias innovadoras y personalizadas.
+          {/* Descripción principal con mejor diseño */}
+          <div className="space-y-8 mb-16">
+            <div className="bg-white/50 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-8 shadow-sm">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                IT Activa propone un trabajo colaborativo donde las definiciones se construyan en conjunto, 
+                con el objetivo de generar una dinámica de comunicación fluida, transparente y de alto impacto hacia la comunidad.
               </p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Visión</h3>
-              <p className="text-muted-foreground">
-                Ser la consultora de referencia en comunicación y gestión pública, 
-                reconocida por nuestra capacidad de transformar realidades a través de la comunicación.
+            
+            <div className="bg-white/30 backdrop-blur-sm border border-gray-200/30 rounded-2xl p-8 shadow-sm">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                Proponemos que nuestros servicios desarrollen, impulsen y potencien las capacidades y condiciones de nuestros clientes, 
+                para consolidar una visión clara, de impacto positivo en las acciones y en la imagen que proyecta.
               </p>
             </div>
-          </div>
-          </div>
-
-          {/* Stats */}
-          <div>
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center p-6 hover:shadow-medium transition-smooth">
-                  <CardContent className="p-0">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground mx-auto mb-4">
-                      {stat.icon}
-                    </div>
-                    <div className="text-3xl font-bold text-foreground mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Values */}
-            <div className="mt-12">
-              <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
-                Nuestros Valores
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Confianza</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Construimos relaciones sólidas basadas en la transparencia y honestidad.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Claridad</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Comunicamos de manera clara y directa, facilitando la comprensión.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Compromiso</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Nos comprometemos al 100% con el éxito de cada proyecto.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            
+            <div className="bg-primary/5 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 shadow-sm">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                La comunicación produce sentidos, transmite emociones y construye identidad. La gestión transforma la realidad. 
+                Juntas, desarrollan historias positivas en la comunidad.
+              </p>
             </div>
           </div>
         </div>

@@ -51,26 +51,26 @@ const ContactPage = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Dirección",
-      content: "Buenos Aires, Argentina",
-      details: "Atendemos clientes en toda América Latina"
+      content: "Coronel Pringles, Buenos Aires",
+      details: "Atendemos clientes en toda Argentina"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Teléfono",
-      content: "+54 11 1234 5678",
+      content: "+54 9 11 2286 6851",
       details: "Lun - Vie: 9:00 - 18:00 hs"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      content: "info@itactiva.com",
+      content: "agenciacc.activa@gmail.com",
       details: "Respuesta en 24 horas"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Horarios de Atención",
       content: "Lun - Vie: 9:00 - 18:00",
-      details: "Sáb: 9:00 - 14:00"
+      details: "Consultas por cita previa"
     }
   ];
 
@@ -218,7 +218,7 @@ const ContactPage = () => {
                   </h3>
                   <div className="grid grid-cols-1 gap-6">
                     {contactInfo.map((info, index) => (
-                      <Card key={index} className="p-6 hover:shadow-medium transition-all duration-300 border border-border bg-card">
+                      <Card key={index} className="p-6 hover:shadow-medium transition-all duration-300 border border-border bg-card rounded-xl">
                         <CardContent className="p-0">
                           <div className="flex items-start space-x-4">
                             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground flex-shrink-0 shadow-soft">
@@ -243,7 +243,7 @@ const ContactPage = () => {
                 </div>
 
                 {/* FAQ Quick Access */}
-                <Card className="bg-muted/50 border border-border">
+                <Card className="bg-muted/50 border border-border rounded-xl">
                   <CardContent className="p-6">
                     <h4 className="font-semibold text-foreground mb-4">Preguntas Frecuentes</h4>
                     <div className="space-y-3 text-sm">
@@ -264,7 +264,7 @@ const ContactPage = () => {
                 </Card>
 
                 {/* Call to Action */}
-                <Card className="bg-primary text-primary-foreground border-0">
+                <Card className="bg-primary text-primary-foreground border-0 rounded-xl">
                   <CardContent className="p-6 text-center">
                     <h4 className="text-lg font-bold mb-3">
                       ¿Necesitas una respuesta inmediata?

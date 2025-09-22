@@ -8,23 +8,19 @@ const Footer = () => {
     "Comunicación para Gobiernos Locales", 
     "Comunicación Política y Análisis",
     "Discurso e Imagen Pública",
-    "Estrategias Digitales con IA",
-    "Storytelling y Storydoing"
+    "Plan Empresas y Organizaciones"
   ];
 
   const quickLinks = [
-    { name: "Inicio", href: "#hero" },
-    { name: "Servicios", href: "#services" },
-    { name: "Nosotros", href: "#about" },
-    { name: "Equipo", href: "#team" },
-    { name: "Testimonios", href: "#testimonials" },
-    { name: "Contacto", href: "#contact" }
+    { name: "Inicio", href: "/" },
+    { name: "Servicios", href: "/servicios" },
+    { name: "Nosotros", href: "/nosotros" },
+    { name: "Contacto", href: "/contacto" }
   ];
 
   const socialLinks = [
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", name: "LinkedIn" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", name: "Twitter" },
-    { icon: <Facebook className="w-5 h-5" />, href: "#", name: "Facebook" }
+    { icon: <Linkedin className="w-5 h-5" />, href: "#", name: "LinkedIn - IT ACTIVA | Consultora" },
+    { icon: <Facebook className="w-5 h-5" />, href: "#", name: "Facebook - IT ACTIVA | Consultora" }
   ];
 
   return (
@@ -33,11 +29,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-4">
-              IT ACTIVA
-            </h3>
+            <div className="mb-4">
+              <img 
+                src="/ACTIVÁ Logo (1).png" 
+                alt="IT ACTIVA Logo" 
+                className="h-12 w-auto brightness-0 invert"
+              />
+            </div>
             <p className="text-background/80 mb-6 leading-relaxed">
-              Consultoría especializada en comunicación y gestión pública. 
+              Consultora de Comunicación y Gestión Pública. 
               Transformamos la realidad a través de estrategias innovadoras y personalizadas.
             </p>
             
@@ -46,19 +46,19 @@ const Footer = () => {
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-3 text-accent" />
                 <span className="text-background/80 text-sm">
-                  Av. Reforma 123, CDMX
+                  Coronel Pringles, Buenos Aires
                 </span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-3 text-accent" />
                 <span className="text-background/80 text-sm">
-                  +52 55 1234 5678
+                  +54 9 11 2286 6851
                 </span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3 text-accent" />
                 <span className="text-background/80 text-sm">
-                  info@itactiva.com
+                  agenciacc.activa@gmail.com
                 </span>
               </div>
             </div>
@@ -71,14 +71,8 @@ const Footer = () => {
               {services.map((service, index) => (
                 <li key={index}>
                   <a 
-                    href="#services"
+                    href="/servicios"
                     className="text-background/80 hover:text-accent transition-smooth text-sm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.querySelector('#services')?.scrollIntoView({
-                        behavior: 'smooth'
-                      });
-                    }}
                   >
                     {service}
                   </a>
@@ -96,12 +90,6 @@ const Footer = () => {
                   <a 
                     href={link.href}
                     className="text-background/80 hover:text-accent transition-smooth text-sm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.querySelector(link.href)?.scrollIntoView({
-                        behavior: 'smooth'
-                      });
-                    }}
                   >
                     {link.name}
                   </a>
@@ -115,7 +103,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Mantente Conectado</h4>
             <p className="text-background/80 text-sm mb-4">
               Suscríbete a nuestro newsletter para recibir insights y 
-              tendencias de consultoría empresarial.
+              tendencias de comunicación y gestión pública.
             </p>
             
             <div className="flex space-x-1 mb-6">

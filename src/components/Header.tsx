@@ -32,6 +32,7 @@ const Header = () => {
     { name: 'Comunicación para Gobiernos Locales', href: '/servicios/comunicacion-gobiernos' },
     { name: 'Comunicación Política y Análisis', href: '/servicios/comunicacion-politica' },
     { name: 'Discurso e Imagen Pública', href: '/servicios/discurso-imagen' },
+    { name: 'Plan Empresas y Organizaciones', href: '/servicios/empresas' },
   ];
 
   return (
@@ -40,9 +41,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              IT ACTIVA
-            </h1>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/ACTIVÁ Logo (1).png" 
+                alt="IT ACTIVA Logo" 
+                className="h-10 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

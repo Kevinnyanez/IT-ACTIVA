@@ -89,7 +89,7 @@ const ServicesPage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {serviceCategories.map((category, index) => (
-                <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border group cursor-pointer">
+                <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border group cursor-pointer rounded-xl">
                   <Link to={category.link} className="block">
                     <CardHeader>
                       <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mb-4 shadow-soft group-hover:scale-110 transition-transform duration-300">

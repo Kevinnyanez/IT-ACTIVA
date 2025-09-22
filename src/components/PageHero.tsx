@@ -18,7 +18,7 @@ const PageHero = ({
   description, 
   ctaText = "Contactar Consultoría",
   ctaAction,
-  backgroundImage = "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop&crop=center&auto=format",
+  backgroundImage = "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1920&h=1080&fit=crop&crop=center&auto=format",
   showBackButton = true 
 }: PageHeroProps) => {
   return (
@@ -30,37 +30,37 @@ const PageHero = ({
           alt="Fondo de ciudad" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/65 to-primary/45"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/70 to-gray-700/60"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {showBackButton && (
-            <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-colors">
+            <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Volver al inicio
             </Link>
           )}
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             {title}
           </h1>
           
           {subtitle && (
-            <h2 className="text-2xl lg:text-3xl font-semibold text-primary-foreground/90 mb-6">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-white/90 mb-6">
               {subtitle}
             </h2>
           )}
           
-          <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             {description}
           </p>
 
           {ctaAction && (
             <Button 
               size="lg" 
-              className="bg-gradient-accent text-accent-foreground hover:opacity-90 shadow-large group"
+              className="bg-primary text-white hover:bg-primary/90 shadow-large group"
               onClick={ctaAction}
             >
               {ctaText}

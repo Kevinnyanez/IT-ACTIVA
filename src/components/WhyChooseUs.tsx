@@ -49,9 +49,9 @@ const WhyChooseUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason, index) => (
-            <Card key={index} className="bg-card hover:shadow-medium transition-smooth group">
+            <Card key={index} className="bg-card hover:shadow-medium transition-smooth group rounded-xl">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mb-4 group-hover:scale-110 transition-smooth">
+                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground mb-4 group-hover:scale-110 transition-smooth">
                   {reason.icon}
                 </div>
                 <CardTitle className="text-2xl font-semibold text-foreground">

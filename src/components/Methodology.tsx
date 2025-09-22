@@ -66,87 +66,104 @@ const Methodology = () => {
   ];
 
   return (
-    <section id="methodology" className="py-20 bg-background">
+    <section id="methodology" className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Nuestra Metodología
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Un proceso estructurado de 5 etapas que garantiza resultados medibles 
-            y sostenibles en el tiempo, adaptado a las necesidades específicas de cada proyecto.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Un proceso estructurado de 5 etapas que garantiza resultados medibles y sostenibles
           </p>
         </div>
 
-        <div className="space-y-8">
-          {steps.map((step, index) => (
-            <Card key={index} className={`relative overflow-hidden ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} lg:flex items-center hover:shadow-medium transition-smooth`}>
-              {/* Step Number Background */}
-              <div className={`absolute top-4 ${index % 2 === 0 ? 'right-4' : 'left-4'} text-8xl font-bold text-secondary/20 z-0`}>
-                {step.number}
-              </div>
-              
-              <CardContent className="p-8 lg:w-1/2 relative z-10">
+        {/* Compact Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {steps.slice(0, 3).map((step, index) => (
+            <Card key={index} className="bg-card hover:shadow-medium transition-smooth rounded-xl border border-border/50">
+              <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground mr-4">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground mr-4">
                     {step.icon}
                   </div>
                   <div>
-                    <div className="text-accent font-bold text-lg mb-1">
-                      Etapa {step.number}
+                    <div className="text-primary font-semibold text-base">
+                      {step.number}
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground">
+                    <h3 className="text-lg font-bold text-foreground">
                       {step.title}
                     </h3>
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground mb-6 text-lg">
+                <p className="text-muted-foreground text-base mb-4">
                   {step.description}
                 </p>
 
-                <ul className="space-y-2">
-                  {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-muted-foreground">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                      <span className="text-sm">{detail}</span>
+                <ul className="space-y-1">
+                  {step.details.slice(0, 2).map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-muted-foreground text-sm">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
+                      <span>{detail}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-
-              {/* Visual Element */}
-              <div className="lg:w-1/2 p-8 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gradient-accent rounded-full flex items-center justify-center opacity-80">
-                  <div className="text-6xl text-accent-foreground">
-                    {step.icon}
-                  </div>
-                </div>
-              </div>
             </Card>
           ))}
         </div>
 
-        {/* Timeline Visualization */}
-        <div className="mt-16">
-          <div className="flex justify-center">
-            <div className="flex items-center space-x-4 overflow-x-auto pb-4">
-              {steps.map((step, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="flex flex-col items-center min-w-0">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
+        {/* Bottom Row - 2 Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {steps.slice(3).map((step, index) => (
+            <Card key={index + 3} className="bg-card hover:shadow-medium transition-smooth rounded-xl border border-border/50">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground mr-4">
+                    {step.icon}
+                  </div>
+                  <div>
+                    <div className="text-primary font-semibold text-base">
                       {step.number}
                     </div>
-                    <div className="text-xs text-center text-muted-foreground mt-2 max-w-20">
-                      {step.title.split(' ')[0]}
-                    </div>
+                    <h3 className="text-lg font-bold text-foreground">
+                      {step.title}
+                    </h3>
                   </div>
-                  {index < steps.length - 1 && (
-                    <div className="w-8 h-0.5 bg-gradient-primary mx-2"></div>
-                  )}
                 </div>
-              ))}
-            </div>
+                
+                <p className="text-muted-foreground text-base mb-4">
+                  {step.description}
+                </p>
+
+                <ul className="space-y-1">
+                  {step.details.slice(0, 2).map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-muted-foreground text-sm">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Compact Timeline */}
+        <div className="flex justify-center">
+          <div className="flex items-center space-x-3 bg-muted/30 rounded-full px-6 py-3">
+            {steps.map((step, index) => (
+              <div key={index} className="flex items-center">
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
+                    {step.number}
+                  </div>
+                </div>
+                {index < steps.length - 1 && (
+                  <div className="w-6 h-0.5 bg-primary/30 mx-2"></div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

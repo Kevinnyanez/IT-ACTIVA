@@ -9,6 +9,7 @@ import GestionPublica from "./pages/GestionPublica";
 import ComunicacionGobiernos from "./pages/ComunicacionGobiernos";
 import ComunicacionPolitica from "./pages/ComunicacionPolitica";
 import DiscursoImagen from "./pages/DiscursoImagen";
+import EmpresasPage from "./pages/EmpresasPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/servicios/comunicacion-gobiernos" element={<ComunicacionGobiernos />} />
           <Route path="/servicios/comunicacion-politica" element={<ComunicacionPolitica />} />
           <Route path="/servicios/discurso-imagen" element={<DiscursoImagen />} />
+          <Route path="/servicios/empresas" element={<EmpresasPage />} />
           <Route path="/nosotros" element={<AboutPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
