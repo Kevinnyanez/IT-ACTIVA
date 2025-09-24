@@ -87,7 +87,7 @@ const ServicesPage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {serviceCategories.map((category, index) => (
                 <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border group cursor-pointer rounded-xl">
                   <Link to={category.link} className="block">
@@ -95,19 +95,19 @@ const ServicesPage = () => {
                       <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mb-4 shadow-soft group-hover:scale-110 transition-transform duration-300">
                         {category.icon}
                       </div>
-                      <CardTitle className="text-xl font-semibold text-foreground">
+                      <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
                         {category.title}
                       </CardTitle>
-                      <CardDescription className="text-muted-foreground">
+                      <CardDescription className="text-lg text-muted-foreground">
                         {category.description}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3 mb-6">
-                        <h4 className="font-medium text-foreground text-sm mb-2">Servicios destacados:</h4>
+                        <h4 className="font-medium text-foreground text-base mb-2">Servicios destacados:</h4>
                         <ul className="space-y-2">
                           {category.highlights.map((highlight, highlightIndex) => (
-                            <li key={highlightIndex} className="flex items-center text-sm text-muted-foreground">
+                            <li key={highlightIndex} className="flex items-center text-base text-muted-foreground">
                               <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                               <span>{highlight}</span>
                             </li>

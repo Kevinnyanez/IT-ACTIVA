@@ -9,56 +9,56 @@ const Services = () => {
       icon: <Building2 className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=center&auto=format",
       title: "Gestión Pública y Gobiernos Locales",
-      description: "Asesoramiento integral en programas, políticas públicas y modernización del Estado.",
+      description: "Transformamos la gestión pública desde lo local. Acompañamos a municipios y organismos en el diseño e implementación de políticas públicas basadas en evidencia.",
       link: "/servicios/gestion-publica",
       services: [
         "Informes de Gestión y Seguimiento de Metas",
-        "Diseño, Análisis y Monitoreo de Políticas Públicas", 
-        "Internacionalización de la Gestión e Implementación de los ODS",
+        "Diseño, Análisis y Monitoreo de Políticas Públicas",
+        "Fortalecimiento de Relaciones Interjurisdiccionales",
+        "Políticas de Educación Superior, Juventudes y Proyectos Especiales",
+        "Internacionalización de la Gestión e Implementación de ODS",
+        "Articulación y Desarrollo Legislativo para Gobiernos",
+        "Asesoramiento Integral en Programas y Proyectos de Gestión",
         "Estrategias Digitales y Políticas de Modernización",
-        "Participación Ciudadana y Presupuestos Participativos"
+        "Participación Ciudadana e Implementación de Presupuesto Participativo"
       ]
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop&crop=center&auto=format",
       title: "Comunicación para Gobiernos Locales",
-      description: "Estrategias comunicacionales especializadas para la gestión pública local.",
+      description: "Comunicamos para transformar. Diseñamos estrategias de comunicación a medida para gobiernos locales, dirigentes y equipos.",
       link: "/servicios/comunicacion-gobiernos",
       services: [
         "Análisis de Coyuntura y Clipping de Prensa",
-        "Desarrollo de Estrategias de Comunicación para Dirigentes",
+        "Desarrollo de Estrategias de Comunicación Personalizadas",
+        "Comunicación Interna y Externa para Equipos de Trabajo",
         "Fortalecimiento de la Marca Ciudad y Desarrollo Local",
-        "Comunicación Interna para Equipos de Trabajo",
-        "Periodismo de Ciudades"
+        "Periodismo de Ciudades",
+        "Asesoramiento en Comunicación Política",
+        "Identificación de Problemáticas y Propuestas de Soluciones Efectivas",
+        "Comunicación de Cercanía y Periodismo de Soluciones",
+        "Gestión y Comunicación de Crisis",
+        "Coordinación y Diseño de Producciones Audiovisuales"
       ]
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop&crop=center&auto=format",
-      title: "Comunicación Política y Análisis",
-      description: "Estrategias digitales, gestión de contenidos y análisis político especializado.",
+      title: "Comunicación Política y Campañas",
+      description: "Tu proyecto político necesita una estrategia que comunique y escuche. Impulsamos tu presencia pública a través de contenidos, segmentación de audiencias y análisis.",
       link: "/servicios/comunicacion-politica",
       services: [
-        "Estrategia de Comunicación y Creación de Contenidos",
-        "Estrategias Digitales y Gestión de Social Media",
-        "Coordinación y Desarrollo de Producciones Audiovisuales",
+        "Estrategias de Comunicación y Creación de Contenido",
         "Identificación de Públicos y Audiencias",
-        "Gestión y Comunicación de Crisis"
-      ]
-    },
-    {
-      icon: <Megaphone className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=100&h=100&fit=crop&crop=center&auto=format",
-      title: "Discurso e Imagen Pública",
-      description: "Construcción de imagen institucional, oratoria y posicionamiento público.",
-      link: "/servicios/discurso-imagen",
-      services: [
-        "Desarrollo de Imagen Institucional",
-        "Posicionamiento y Manejo del Discurso Público",
+        "Storytelling y Storydoing",
+        "Clipping de Prensa, Notas y Artículos. Monitoreo de Medios",
+        "Estrategias Digitales y Gestión de Social Media",
+        "Posicionamiento y Desarrollo del Discurso Público",
         "Desarrollo de Encuestas de Opinión",
         "Debate Electoral: Puntos Clave y Coaching",
-        "Oratoria para Conectar con tu Público"
+        "Oratoria para Conectar con tu Público",
+        "Plataforma de Gobierno de Alto Impacto"
       ]
     },
     {
@@ -80,7 +80,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+    <section id="services" className="min-h-screen pt-20 pb-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -105,35 +105,35 @@ const Services = () => {
         </div>
 
         {/* Main Service Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {serviceCategories.map((category, index) => (
-            <Card key={index} className="bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group cursor-pointer rounded-2xl border border-gray-200/50 hover:border-primary/20">
+            <Card key={index} className="bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group cursor-pointer rounded-2xl border border-gray-200/50 hover:border-primary/20 p-6 lg:p-8">
               <Link to={category.link} className="block">
                 <CardHeader className="pb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-all duration-300 overflow-hidden shadow-lg">
+                  <div className="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-300 overflow-hidden shadow-lg">
                     <img 
                       src={category.image}
                       alt={category.title}
                       className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
-                  <CardTitle className="text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-2xl lg:text-4xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {category.title}
                   </CardTitle>
-                  <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
                     {category.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <ul className="space-y-3 mb-6">
                     {category.services.slice(0, 3).map((service, serviceIndex) => (
-                      <li key={serviceIndex} className="flex items-start text-sm text-muted-foreground">
+                      <li key={serviceIndex} className="flex items-start text-base lg:text-lg text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         <span>{service}</span>
                       </li>
                     ))}
                     {category.services.length > 3 && (
-                      <li className="flex items-start text-sm text-primary font-medium">
+                      <li className="flex items-start text-base lg:text-lg text-primary font-medium">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         <span>+{category.services.length - 3} servicios más</span>
                       </li>

@@ -18,43 +18,19 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl">
           <div className="text-center lg:text-left">
-            {/* Badge de credibilidad */}
-            <div className="flex flex-col items-center lg:items-start mb-8">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
-                <Award className="w-4 h-4 text-primary mr-2" />
-                <span className="text-white/90 text-sm font-medium">Consultora especializada desde 2008</span>
-              </div>
-            </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-8">
               La comunicación 
               <span className="block text-primary">
                 transforma la realidad
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-relaxed mb-12">
               Impulsamos tu marca con estrategias digitales, inteligencia artificial 
               y asesoramiento en gestión pública para gobiernos locales.
             </p>
 
-            {/* Stats profesionales */}
-            <div className="flex flex-wrap gap-8 mb-8 justify-center lg:justify-start">
-              <div className="flex items-center text-white/90">
-                <Users className="w-6 h-6 mr-3 text-primary" />
-                <div>
-                  <div className="text-2xl font-bold">30+</div>
-                  <div className="text-sm opacity-80">Gobiernos asesorados</div>
-                </div>
-              </div>
-              <div className="flex items-center text-white/90">
-                <TrendingUp className="w-6 h-6 mr-3 text-primary" />
-                <div>
-                  <div className="text-2xl font-bold">15+</div>
-                  <div className="text-sm opacity-80">Años de experiencia</div>
-                </div>
-              </div>
-            </div>
 
             {/* Value Props mejorados */}
             <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
@@ -72,8 +48,8 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* CTA Buttons mejorados */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            {/* CTA Button */}
+            <div className="flex justify-center lg:justify-start">
               <Button 
                 size="lg" 
                 className="bg-primary text-white hover:bg-primary/90 shadow-large group px-8 py-6 text-lg"
@@ -85,18 +61,6 @@ const Hero = () => {
               >
                 Solicitar Propuesta
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors px-8 py-6 text-lg backdrop-blur-sm"
-                onClick={() => {
-                  document.querySelector('#services')?.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }}
-              >
-                Conoce Nuestros Servicios
               </Button>
             </div>
           </div>

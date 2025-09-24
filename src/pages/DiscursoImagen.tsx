@@ -121,11 +121,11 @@ const DiscursoImagen = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {services.map((service, index) => (
                 <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border rounded-xl">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-foreground">
+                    <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
                       {service.name}
                     </CardTitle>
                     <CardDescription className="text-muted-foreground text-lg">

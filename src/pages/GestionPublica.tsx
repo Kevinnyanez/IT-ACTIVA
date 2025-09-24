@@ -17,21 +17,39 @@ const GestionPublica = () => {
       ]
     },
     {
-      name: "Asesoramiento Integral en Programas y Proyectos de Gestión",
-      description: "Diseño e implementación de proyectos y políticas públicas, mediante diagnósticos claves, asegurando su alineación con las prioridades gubernamentales y el desarrollo sostenible.",
-      benefits: [
-        "Diagnósticos integrales",
-        "Planificación estratégica",
-        "Implementación efectiva"
-      ]
-    },
-    {
       name: "Diseño, Análisis y Monitoreo de Políticas Públicas",
       description: "Formulación de políticas públicas basadas en evidencia, con análisis de impacto y mecanismos de monitoreo continuo para asegurar su efectividad en el territorio.",
       benefits: [
         "Políticas basadas en evidencia",
         "Análisis de impacto",
         "Monitoreo continuo"
+      ]
+    },
+    {
+      name: "Fortalecimiento de Relaciones Interjurisdiccionales",
+      description: "Diseño de estrategias para fomentar la cooperación entre municipios, provincias y la Nación, garantizando una gestión coordinada y eficiente.",
+      benefits: [
+        "Coordinación interjurisdiccional",
+        "Gestión eficiente",
+        "Cooperación institucional"
+      ]
+    },
+    {
+      name: "Políticas de Educación Superior, Juventudes y Proyectos Especiales",
+      description: "Creación de programas que integren a las universidades, centros de formación y jóvenes en proyectos que fortalezcan el desarrollo local y regional.",
+      benefits: [
+        "Integración universitaria",
+        "Desarrollo juvenil",
+        "Proyectos locales"
+      ]
+    },
+    {
+      name: "Internacionalización de la Gestión e Implementación de ODS",
+      description: "Desarrollo de estrategias para alinear las políticas locales a estándares internacionales, promoviendo la adopción de los Objetivos de Desarrollo Sostenible como eje transversal en la gestión pública.",
+      benefits: [
+        "Alineación internacional",
+        "Objetivos de Desarrollo Sostenible",
+        "Estándares globales"
       ]
     },
     {
@@ -44,17 +62,17 @@ const GestionPublica = () => {
       ]
     },
     {
-      name: "Internacionalización de la Gestión e Implementación de los ODS",
-      description: "Desarrollo de estrategias para alinear las políticas locales a estándares internacionales, promoviendo la adopción de los Objetivos de Desarrollo Sostenible como eje transversal en la gestión pública.",
+      name: "Asesoramiento Integral en Programas y Proyectos de Gestión",
+      description: "Diseño e implementación de proyectos y políticas públicas, mediante diagnósticos claves, asegurando su alineación con las prioridades gubernamentales y el desarrollo sostenible.",
       benefits: [
-        "Alineación internacional",
-        "Objetivos de Desarrollo Sostenible",
-        "Estándares globales"
+        "Diagnósticos integrales",
+        "Planificación estratégica",
+        "Implementación efectiva"
       ]
     },
     {
       name: "Estrategias Digitales y Políticas de Modernización",
-      description: "Implementación de tecnologías digitales para modernizar la gestión pública, mejorando la eficiencia administrativa y la relación con los ciudadanos.",
+      description: "Asesoramiento en herramientas digitales y políticas innovadoras que potencien la eficiencia en la administración pública y fortalezcan la relación con la ciudadanía.",
       benefits: [
         "Modernización digital",
         "Eficiencia administrativa",
@@ -62,30 +80,12 @@ const GestionPublica = () => {
       ]
     },
     {
-      name: "Participación Ciudadana e Implementación de Presupuestos Participativos",
+      name: "Participación Ciudadana e Implementación de Presupuesto Participativo",
       description: "Promoción de mecanismos de democracia participativa para incluir las voces de los ciudadanos en la toma de decisiones y la asignación de recursos públicos.",
       benefits: [
         "Democracia participativa",
         "Inclusión ciudadana",
         "Transparencia en presupuestos"
-      ]
-    },
-    {
-      name: "Fortalecimiento de las Relaciones Interjurisdiccionales",
-      description: "Diseño de estrategias para fomentar la cooperación entre municipios, provincias y la Nación, garantizando una gestión coordinada y eficiente.",
-      benefits: [
-        "Coordinación interjurisdiccional",
-        "Gestión eficiente",
-        "Cooperación institucional"
-      ]
-    },
-    {
-      name: "Políticas de Educación Superior, Juventud y Proyectos Especiales",
-      description: "Creación de programas que integren a las universidades, centros de formación y jóvenes en proyectos que fortalezcan el desarrollo local y regional.",
-      benefits: [
-        "Integración universitaria",
-        "Desarrollo juvenil",
-        "Proyectos locales"
       ]
     }
   ];
@@ -123,7 +123,7 @@ const GestionPublica = () => {
               </h1>
               
               <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
-                Asesoramiento integral en programas, políticas públicas y modernización del Estado para fortalecer la gestión local y el desarrollo sostenible.
+                Transformamos la gestión pública desde lo local. Acompañamos a municipios y organismos en el diseño e implementación de políticas públicas basadas en evidencia, con foco en resultados, impacto territorial y planificación estratégica.
               </p>
 
               {/* Value Props */}
@@ -157,22 +157,22 @@ const GestionPublica = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {services.map((service, index) => (
                 <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border/50 rounded-xl h-full">
                   <CardHeader className="pb-4">
-                    <CardTitle className="text-xl font-semibold text-foreground leading-tight">
+                    <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground leading-tight">
                       {service.name}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <p className="text-muted-foreground text-base mb-6 leading-relaxed">
+                    <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                       {service.description}
                     </p>
                     <div className="space-y-3">
-                      <h4 className="font-medium text-foreground text-sm uppercase tracking-wide">Beneficios principales:</h4>
+                      <h4 className="font-medium text-foreground text-base uppercase tracking-wide">Beneficios principales:</h4>
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-muted-foreground">
+                        <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
                           <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>

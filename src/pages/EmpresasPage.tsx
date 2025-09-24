@@ -175,24 +175,24 @@ const EmpresasPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {services.map((service, index) => (
               <Card key={index} className="bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group rounded-2xl border border-gray-200/50 hover:border-primary/20">
                 <CardHeader className="pb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-all duration-300">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-lg text-muted-foreground leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <ul className="space-y-2">
                     {service.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start text-sm text-muted-foreground">
+                      <li key={detailIndex} className="flex items-start text-base text-muted-foreground">
                         <CheckCircle className="w-4 h-4 text-primary mr-3 mt-0.5 flex-shrink-0" />
                         <span>{detail}</span>
                       </li>

@@ -130,22 +130,22 @@ const ComunicacionPolitica = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {services.map((service, index) => (
                 <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border/50 rounded-xl h-full">
                   <CardHeader className="pb-4">
-                    <CardTitle className="text-xl font-semibold text-foreground leading-tight">
+                    <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground leading-tight">
                       {service.name}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <p className="text-muted-foreground text-base mb-6 leading-relaxed">
+                    <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                       {service.description}
                     </p>
                     <div className="space-y-3">
-                      <h4 className="font-medium text-foreground text-sm uppercase tracking-wide">Beneficios principales:</h4>
+                      <h4 className="font-medium text-foreground text-base uppercase tracking-wide">Beneficios principales:</h4>
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-muted-foreground">
+                        <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
                           <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>
