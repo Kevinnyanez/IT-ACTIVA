@@ -1,7 +1,8 @@
-import { CheckCircle, Target, Lightbulb, BarChart3, HandHeart } from 'lucide-react';
+import { CheckCircle, Target, Lightbulb, BarChart3, HandHeart, Download } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import { Button } from '@/components/ui/button';
 
 const AboutPage = () => {
   const successSteps = [
@@ -99,7 +100,7 @@ const AboutPage = () => {
       <main>
         <PageHero
           title="Sobre IT ACTIVA"
-          description="Más de 15 años transformando la comunicación y gestión pública. Liderados por Ignacio Tonelli, especialista en comunicación política y gestión gubernamental."
+          description="Más de 6 años transformando la comunicación y gestión pública. Liderados por Ignacio Tonelli, especialista en comunicación política y gestión gubernamental."
           ctaText="Conocer Nuestros Servicios"
           ctaAction={() => {
             window.location.href = '/servicios';
@@ -179,10 +180,10 @@ const AboutPage = () => {
                     
                     <div className="mb-6">
                       <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        Soy Ignacio Tonelli, licenciado en Comunicación con más de 15 años de experiencia en consultoría y gestión pública. Me especializo en transformar la comunicación de gobiernos locales y organizaciones políticas a través de estrategias innovadoras y metodologías probadas.
+                        Soy Ignacio Tonelli, licenciado en Comunicación con más de 6 años de experiencia en consultoría y gestión pública. Me especializo en transformar la comunicación de gobiernos locales y organizaciones políticas a través de estrategias innovadoras y metodologías probadas.
                       </p>
                       <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        He trabajado con más de 30 gobiernos locales, desarrollando proyectos de comunicación estratégica, gestión de políticas públicas y modernización institucional. Mi experiencia abarca desde ONGs hasta gobiernos municipales y provinciales.
+                        He trabajado con 4 gobiernos locales, desarrollando proyectos de comunicación estratégica, gestión de políticas públicas y modernización institucional. Mi experiencia abarca desde ONGs hasta gobiernos municipales y provinciales.
                       </p>
                       <p className="text-gray-700 text-base leading-relaxed">
                         Como consultor y docente, me enfoco en crear soluciones personalizadas que generen impacto real y medible en las comunidades. Creo firmemente en el poder transformador de la comunicación y la gestión pública para construir sociedades más transparentes y eficientes.
@@ -202,6 +203,23 @@ const AboutPage = () => {
                           </div>
                         ))}
                       </div>
+                    </div>
+
+                    {/* CV Download Button */}
+                    <div className="pt-6 border-t border-gray-200">
+                      <Button 
+                        variant="outline"
+                        className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 text-sm font-medium"
+                        onClick={() => {
+                          const link = document.createElement('a');
+                          link.href = '/cv-ignacio-tonelli.pdf';
+                          link.download = 'CV-Ignacio-Tonelli.pdf';
+                          link.click();
+                        }}
+                      >
+                        <Download className="w-4 h-4 mr-2" />
+                        Descargar CV
+                      </Button>
                     </div>
                   </div>
                 </div>

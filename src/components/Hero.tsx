@@ -8,8 +8,9 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop&crop=center&auto=format" 
-          alt="Ciudad moderna y gestión pública" 
+          alt="IT ACTIVA - Consultora de comunicación política y gestión pública en Argentina. Especialistas en gobiernos locales y estrategias de comunicación institucional" 
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/70 to-gray-700/60"></div>
       </div>

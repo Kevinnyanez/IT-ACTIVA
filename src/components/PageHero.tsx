@@ -43,17 +43,17 @@ const PageHero = ({
             </Link>
           )}
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             {title}
           </h1>
           
           {subtitle && (
-            <h2 className="text-2xl lg:text-3xl font-semibold text-white/90 mb-6">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-white/90 mb-8">
               {subtitle}
             </h2>
           )}
           
-          <p className="text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
             {description}
           </p>
 

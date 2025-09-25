@@ -21,6 +21,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const EmpresasPage = () => {
   const services = [
@@ -145,6 +146,7 @@ const EmpresasPage = () => {
           ctaAction={() => {
             window.location.href = '/contacto';
           }}
+          backgroundImage="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&h=1080&fit=crop&crop=center&auto=format"
         />
 
         {/* Purpose Section */}
@@ -271,32 +273,44 @@ const EmpresasPage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-24 bg-gradient-to-br from-primary to-primary/80 text-white">
+      <section className="py-24 bg-gradient-to-br from-muted/30 via-background to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            ¿Listos para transformar juntos?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            En cada paso, trabajamos para que tu empresa no solo comunique mejor, sino que genere impacto, transforme su entorno y cuente historias que trasciendan.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-              <Link to="/contacto">
-                Contactanos
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              ¿Listos para transformar juntos?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+              En cada paso, trabajamos para que tu empresa no solo comunique mejor, sino que genere impacto, transforme su entorno y cuente historias que trasciendan.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-large"
+                onClick={() => {
+                  window.open('https://wa.me/5491122866851?text=Hola! Me interesa conocer más sobre el Plan Empresas y Organizaciones.', '_blank');
+                }}
+              >
+                Consulta por WhatsApp
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Link to="/servicios">
-                Ver todos los servicios
-              </Link>
-            </Button>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => {
+                  window.location.href = '/contacto';
+                }}
+              >
+                Formulario de Contacto
+              </Button>
+            </div>
           </div>
         </div>
       </section>
       </main>
 
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };

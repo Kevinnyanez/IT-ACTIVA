@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MessageSquare, ArrowLeft, CheckCircle, Mic, Eye, TrendingUp } from 'lucide-react';
+import { MessageSquare, CheckCircle, Mic, Eye, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const ComunicacionGobiernos = () => {
   const services = [
@@ -73,7 +74,7 @@ const ComunicacionGobiernos = () => {
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop&crop=center&auto=format" 
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920&h=1080&fit=crop&crop=center&auto=format" 
               alt="Comunicación Gobiernos" 
               className="w-full h-full object-cover"
             />
@@ -83,10 +84,6 @@ const ComunicacionGobiernos = () => {
           {/* Content */}
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Volver al inicio
-              </Link>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Comunicación para 
@@ -210,9 +207,47 @@ const ComunicacionGobiernos = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                  ¿Listo para fortalecer la comunicación de tu gobierno local?
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                  Contacta con nuestros especialistas y descubre cómo podemos ayudarte a mejorar la comunicación con tus ciudadanos.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-large"
+                    onClick={() => {
+                      window.open('https://wa.me/5491122866851?text=Hola! Me interesa conocer más sobre Comunicación para Gobiernos Locales.', '_blank');
+                    }}
+                  >
+                    Consulta por WhatsApp
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => {
+                      window.location.href = '/contacto';
+                    }}
+                  >
+                    Formulario de Contacto
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };

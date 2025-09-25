@@ -1,14 +1,14 @@
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    "Gestión Pública y Gobiernos Locales",
-    "Comunicación para Gobiernos Locales", 
-    "Comunicación Política y Análisis",
-    "Discurso e Imagen Pública",
-    "Plan Empresas y Organizaciones"
+    { name: "Gestión Pública y Gobiernos Locales", href: "/servicios/gestion-publica" },
+    { name: "Comunicación para Gobiernos Locales", href: "/servicios/comunicacion-gobiernos" }, 
+    { name: "Comunicación Política y Campañas", href: "/servicios/comunicacion-politica-campanas" },
+    { name: "Plan Empresas y Organizaciones", href: "/servicios/empresas" }
   ];
 
   const quickLinks = [
@@ -19,8 +19,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", name: "LinkedIn - IT ACTIVA | Consultora" },
-    { icon: <Facebook className="w-5 h-5" />, href: "#", name: "Facebook - IT ACTIVA | Consultora" }
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/company/106146305/admin/", name: "LinkedIn - IT ACTIVA | Consultora" }
   ];
 
   return (
@@ -30,11 +29,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <img 
-                src="/ACTIVÁ Logo (1).png" 
-                alt="IT ACTIVA Logo" 
-                className="h-12 w-auto brightness-0 invert"
-              />
+              <div className="bg-white p-2 rounded-lg inline-block">
+                <Logo variant="footer" />
+              </div>
             </div>
             <p className="text-background/80 mb-6 leading-relaxed">
               Consultora de Comunicación y Gestión Pública. 
@@ -71,10 +68,10 @@ const Footer = () => {
               {services.map((service, index) => (
                 <li key={index}>
                   <a 
-                    href="/servicios"
+                    href={service.href}
                     className="text-background/80 hover:text-accent transition-smooth text-sm"
                   >
-                    {service}
+                    {service.name}
                   </a>
                 </li>
               ))}
@@ -139,16 +136,22 @@ const Footer = () => {
             <div className="text-background/60 text-sm mb-4 md:mb-0">
               © {currentYear} IT ACTIVA. Todos los derechos reservados.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-accent transition-smooth">
-                Política de Privacidad
-              </a>
-              <a href="#" className="text-background/60 hover:text-accent transition-smooth">
-                Términos de Servicio
-              </a>
-              <a href="#" className="text-background/60 hover:text-accent transition-smooth">
-                Cookies
-              </a>
+          </div>
+          
+          {/* Appy Studios Credit */}
+          <div className="mt-4 pt-4 border-t border-background/10">
+            <div className="text-center">
+              <p className="text-background/50 text-xs">
+                Sitio web desarrollado por{' '}
+                <a 
+                  href="https://www.instagram.com/appystudiosweb/?hl=es" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-accent/80 transition-smooth font-medium"
+                >
+                  Appy Studios
+                </a>
+              </p>
             </div>
           </div>
         </div>

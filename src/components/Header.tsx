@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,48 +22,34 @@ const Header = () => {
     };
   }, []);
 
-  const navigation = [
-    { name: 'Inicio', href: '/' },
-    { name: 'Nosotros', href: '/nosotros' },
-    { name: 'Contacto', href: '/contacto' },
-  ];
-
   const services = [
     { name: 'Gestión Pública y Gobiernos Locales', href: '/servicios/gestion-publica' },
     { name: 'Comunicación para Gobiernos Locales', href: '/servicios/comunicacion-gobiernos' },
-    { name: 'Comunicación Política y Análisis', href: '/servicios/comunicacion-politica' },
-    { name: 'Discurso e Imagen Pública', href: '/servicios/discurso-imagen' },
+    { name: 'Comunicación Política y Campañas', href: '/servicios/comunicacion-politica-campanas' },
     { name: 'Plan Empresas y Organizaciones', href: '/servicios/empresas' },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-18 lg:h-22">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <img 
-                src="/ACTIVÁ Logo (1).png" 
-                alt="IT ACTIVA Logo" 
-                className="h-8 sm:h-10 lg:h-12 w-auto"
-              />
-            </Link>
+            <Logo variant="header" />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-6 lg:space-x-8">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-foreground hover:text-primary transition-smooth font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              {/* Inicio */}
+              <li>
+                <Link
+                  to="/"
+                  className="text-foreground hover:text-primary transition-smooth font-medium"
+                >
+                  Inicio
+                </Link>
+              </li>
               
               {/* Services Dropdown */}
               <li className="relative" ref={dropdownRef}>
@@ -90,6 +77,26 @@ const Header = () => {
                     </div>
                   </div>
                 )}
+              </li>
+
+              {/* Nosotros */}
+              <li>
+                <Link
+                  to="/nosotros"
+                  className="text-foreground hover:text-primary transition-smooth font-medium"
+                >
+                  Nosotros
+                </Link>
+              </li>
+
+              {/* Contacto */}
+              <li>
+                <Link
+                  to="/contacto"
+                  className="text-foreground hover:text-primary transition-smooth font-medium"
+                >
+                  Contacto
+                </Link>
               </li>
             </ul>
           </nav>
@@ -120,16 +127,14 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-card border-t border-border">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {/* Inicio */}
+              <Link
+                to="/"
+                className="block px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Inicio
+              </Link>
               
               {/* Services in mobile */}
               <div className="px-3 py-2">
@@ -145,6 +150,24 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
+
+              {/* Nosotros */}
+              <Link
+                to="/nosotros"
+                className="block px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Nosotros
+              </Link>
+
+              {/* Contacto */}
+              <Link
+                to="/contacto"
+                className="block px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-smooth"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contacto
+              </Link>
               
               <div className="px-3 py-2">
                 <Button 

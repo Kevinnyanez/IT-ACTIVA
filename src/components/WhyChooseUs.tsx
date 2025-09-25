@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
     {
       icon: <CheckCircle className="w-8 h-8" />,
       title: "Experiencia Comprobada",
-      description: "Más de 15 años trabajando con gobiernos locales, con casos de éxito documentados en toda la región."
+      description: "Más de 6 años trabajando con gobiernos locales, con casos de éxito documentados en toda la región."
     }
   ];
 

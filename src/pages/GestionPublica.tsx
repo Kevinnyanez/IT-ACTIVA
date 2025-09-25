@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Building2, CheckCircle, Target, Users, Globe, ArrowLeft } from 'lucide-react';
+import { Building2, CheckCircle, Target, Users, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const GestionPublica = () => {
   const services = [
@@ -100,7 +101,7 @@ const GestionPublica = () => {
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1920&h=1080&fit=crop&crop=center&auto=format" 
+              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=1080&fit=crop&crop=center&auto=format" 
               alt="Gestión Pública" 
               className="w-full h-full object-cover"
             />
@@ -110,10 +111,6 @@ const GestionPublica = () => {
           {/* Content */}
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Volver al inicio
-              </Link>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Gestión Pública y 
@@ -238,35 +235,37 @@ const GestionPublica = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-primary">
+        <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                ¿Listo para transformar tu gestión pública?
-              </h2>
-              <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-                Contacta con nuestros especialistas y descubre cómo podemos ayudarte a alcanzar tus objetivos de desarrollo local.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-primary hover:bg-gray-100 shadow-large"
-                  onClick={() => {
-                    window.location.href = '/contacto';
-                  }}
-                >
-                  Solicitar Consulta
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-primary"
-                  onClick={() => {
-                    window.location.href = '/servicios';
-                  }}
-                >
-                  Ver Todos los Servicios
-                </Button>
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                  ¿Listo para transformar tu gestión pública?
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                  Contacta con nuestros especialistas y descubre cómo podemos ayudarte a alcanzar tus objetivos de desarrollo local.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-large"
+                    onClick={() => {
+                      window.open('https://wa.me/5491122866851?text=Hola! Me interesa conocer más sobre Gestión Pública y Gobiernos Locales.', '_blank');
+                    }}
+                  >
+                    Consulta por WhatsApp
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => {
+                      window.location.href = '/contacto';
+                    }}
+                  >
+                    Formulario de Contacto
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -275,6 +274,7 @@ const GestionPublica = () => {
       </main>
 
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };

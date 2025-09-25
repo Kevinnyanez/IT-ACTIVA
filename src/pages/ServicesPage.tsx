@@ -5,8 +5,31 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import SEO from '@/components/SEO';
 
 const ServicesPage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Servicios de Consultoría IT ACTIVA",
+    "description": "Servicios especializados en comunicación política, gestión pública y estrategias empresariales en Argentina",
+    "provider": {
+      "@type": "Organization",
+      "name": "IT ACTIVA",
+      "url": "https://itactiva.com"
+    },
+    "serviceType": [
+      "Gestión Pública y Gobiernos Locales",
+      "Comunicación para Gobiernos Locales", 
+      "Comunicación Política y Campañas",
+      "Plan Empresas y Organizaciones"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    }
+  };
+
   const serviceCategories = [
     {
       icon: <Building2 className="w-8 h-8" />,
@@ -60,6 +83,13 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Servicios de Consultoría Política y Gestión Pública"
+        description="Descubre nuestros servicios especializados en comunicación política, gestión pública y estrategias empresariales. IT ACTIVA ofrece consultoría integral para gobiernos locales y organizaciones en Argentina."
+        keywords="servicios consultoría política, gestión pública argentina, comunicación gubernamental, asesoramiento municipal, estrategias políticas, comunicación institucional"
+        canonicalUrl="/servicios"
+        structuredData={structuredData}
+      />
       <Header />
       
       <main>
