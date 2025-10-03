@@ -131,6 +131,7 @@ Enviado desde el sitio web de IT ACTIVA
           subtitle="Nos interesa ayudarte"
           description="Déjanos tus datos para conectar juntos y transformar tu gestión pública. Estamos aquí para escucharte y diseñar la solución perfecta para tu organización."
           ctaText="Enviar Mensaje"
+          backgroundImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&h=1080&fit=crop&crop=center&auto=format"
           ctaAction={() => {
             document.querySelector('#contact-form')?.scrollIntoView({
               behavior: 'smooth'

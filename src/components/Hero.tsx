@@ -20,31 +20,31 @@ const Hero = () => {
         <div className="max-w-6xl">
           <div className="text-center lg:text-left">
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 sm:mb-8">
               La comunicación 
               <span className="block text-primary">
                 transforma la realidad
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-relaxed mb-12">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-relaxed mb-8 sm:mb-12">
               Impulsamos tu marca con estrategias digitales, inteligencia artificial 
               y asesoramiento en gestión pública para gobiernos locales.
             </p>
 
 
             {/* Value Props mejorados */}
-            <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
-              <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-                <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+            <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
+              <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-white/10 text-sm sm:text-base">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primary flex-shrink-0" />
                 <span>Comunicación estratégica</span>
               </div>
-              <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-                <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+              <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-white/10 text-sm sm:text-base">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primary flex-shrink-0" />
                 <span>Gestión pública especializada</span>
               </div>
-              <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-                <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+              <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-white/10 text-sm sm:text-base">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primary flex-shrink-0" />
                 <span>Transformación digital</span>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Hero = () => {
             <div className="flex justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-primary text-white hover:bg-primary/90 shadow-large group px-8 py-6 text-lg"
+                className="bg-primary text-white hover:bg-primary/90 shadow-large group px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto"
                 onClick={() => {
                   document.querySelector('#contact')?.scrollIntoView({
                     behavior: 'smooth'
@@ -61,7 +61,7 @@ const Hero = () => {
                 }}
               >
                 Solicitar Propuesta
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-smooth" />
               </Button>
             </div>
           </div>
@@ -69,7 +69,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
         </div>

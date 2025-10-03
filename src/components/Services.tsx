@@ -7,7 +7,7 @@ const Services = () => {
   const serviceCategories = [
     {
       icon: <Building2 className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=center&auto=format",
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Gestión Pública y Gobiernos Locales",
       description: "Transformamos la gestión pública desde lo local. Acompañamos a municipios y organismos en el diseño e implementación de políticas públicas basadas en evidencia.",
       link: "/servicios/gestion-publica",
@@ -25,7 +25,7 @@ const Services = () => {
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop&crop=center&auto=format",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Comunicación para Gobiernos Locales",
       description: "Comunicamos para transformar. Diseñamos estrategias de comunicación a medida para gobiernos locales, dirigentes y equipos.",
       link: "/servicios/comunicacion-gobiernos",
@@ -44,7 +44,7 @@ const Services = () => {
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop&crop=center&auto=format",
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Comunicación Política y Campañas",
       description: "Tu proyecto político necesita una estrategia que comunique y escuche. Impulsamos tu presencia pública a través de contenidos, segmentación de audiencias y análisis.",
       link: "/servicios/comunicacion-politica",
@@ -63,7 +63,7 @@ const Services = () => {
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=center&auto=format",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Plan Empresas y Organizaciones",
       description: "Transformamos la comunicación empresarial con propuestas integrales que combinan innovación, análisis y ejecución.",
       link: "/servicios/empresas",

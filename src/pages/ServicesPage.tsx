@@ -33,6 +33,7 @@ const ServicesPage = () => {
   const serviceCategories = [
     {
       icon: <Building2 className="w-8 h-8" />,
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Gestión Pública y Gobiernos Locales",
       description: "Asesoramiento integral en programas, políticas públicas y modernización del Estado.",
       link: "/servicios/gestion-publica",
@@ -45,6 +46,7 @@ const ServicesPage = () => {
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Comunicación para Gobiernos Locales",
       description: "Estrategias comunicacionales especializadas para la gestión pública local.",
       link: "/servicios/comunicacion-gobiernos",
@@ -57,6 +59,7 @@ const ServicesPage = () => {
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Comunicación Política y Análisis",
       description: "Estrategias digitales, gestión de contenidos y análisis político especializado.",
       link: "/servicios/comunicacion-politica",
@@ -69,6 +72,7 @@ const ServicesPage = () => {
     },
     {
       icon: <Megaphone className="w-8 h-8" />,
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Discurso e Imagen Pública",
       description: "Construcción de imagen institucional, oratoria y posicionamiento público.",
       link: "/servicios/discurso-imagen",
@@ -122,8 +126,12 @@ const ServicesPage = () => {
                 <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border group cursor-pointer rounded-xl">
                   <Link to={category.link} className="block">
                     <CardHeader>
-                      <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mb-4 shadow-soft group-hover:scale-110 transition-transform duration-300">
-                        {category.icon}
+                      <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mb-4 shadow-soft group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                        <img 
+                          src={category.image}
+                          alt={category.title}
+                          className="w-full h-full object-cover rounded-xl"
+                        />
                       </div>
                       <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
                         {category.title}

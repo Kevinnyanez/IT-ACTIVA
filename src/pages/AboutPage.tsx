@@ -101,10 +101,7 @@ const AboutPage = () => {
         <PageHero
           title="Sobre IT ACTIVA"
           description="Más de 6 años transformando la comunicación y gestión pública. Liderados por Ignacio Tonelli, especialista en comunicación política y gestión gubernamental."
-          ctaText="Conocer Nuestros Servicios"
-          ctaAction={() => {
-            window.location.href = '/servicios';
-          }}
+          backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&crop=center&auto=format"
         />
 
         {/* About Content */}
@@ -275,12 +272,6 @@ const AboutPage = () => {
                     className="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                   >
                     Solicitar Consulta
-                  </button>
-                  <button 
-                    onClick={() => window.location.href = '/servicios'}
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-colors"
-                  >
-                    Ver Nuestros Servicios
                   </button>
                 </div>
               </div>
