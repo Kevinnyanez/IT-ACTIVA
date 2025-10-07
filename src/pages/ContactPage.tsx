@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Share2, Linkedin, Facebook, Instagram } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
@@ -105,11 +105,12 @@ Enviado desde el sitio web de IT ACTIVA
       action: "mailto:agenciacc.activa@gmail.com"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Horarios de Atención",
-      content: "Lun - Vie: 9:00 - 18:00",
-      details: "Consultas por cita previa",
-      action: null
+      icon: <Share2 className="w-6 h-6" />,
+      title: "RRSS",
+      content: "",
+      details: "",
+      action: null,
+      social: true
     }
   ];
 
@@ -128,8 +129,8 @@ Enviado desde el sitio web de IT ACTIVA
       <main>
         <PageHero
           title="Contacto"
-          subtitle="Nos interesa ayudarte"
-          description="Déjanos tus datos para conectar juntos y transformar tu gestión pública. Estamos aquí para escucharte y diseñar la solución perfecta para tu organización."
+          subtitle=""
+          description="Dejanos tu mensaje y diseñemos juntos la estrategia que tu proyecto necesita. Estamos listos para acompañarte en cada paso."
           ctaText="Enviar Mensaje"
           backgroundImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&h=1080&fit=crop&crop=center&auto=format"
           ctaAction={() => {
@@ -267,24 +268,48 @@ Enviado desde el sitio web de IT ACTIVA
                           }
                         }}
                       >
-                        <CardContent className="p-0">
-                          <div className="flex items-start space-x-4">
-                            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground flex-shrink-0 shadow-soft">
-                              {info.icon}
-                            </div>
-                            <div>
-                              <h4 className="font-semibold text-foreground mb-1">
-                                {info.title}
-                              </h4>
-                              <p className="text-foreground font-medium mb-1">
-                                {info.content}
-                              </p>
-                              <p className="text-muted-foreground text-sm">
-                                {info.details}
-                              </p>
-                            </div>
+                        <CardContent className="p-0"                      >
+                        <div className="flex items-start space-x-4">
+                          <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground flex-shrink-0 shadow-soft">
+                            {info.icon}
                           </div>
-                        </CardContent>
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-foreground mb-1">
+                              {info.title}
+                            </h4>
+                            {info.social ? (
+                              <div className="flex flex-col space-y-2 mt-2">
+                                <div className="flex items-center text-muted-foreground text-sm">
+                                  <Facebook className="w-4 h-4 mr-2 flex-shrink-0" />
+                                  <span>IT ACTIVA | Consultora</span>
+                                </div>
+                                <a 
+                                  href="https://www.linkedin.com/company/106146305/admin/" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
+                                >
+                                  <Linkedin className="w-4 h-4 mr-2 flex-shrink-0" />
+                                  <span>IT ACTIVA | Consultora</span>
+                                </a>
+                                <div className="flex items-center text-muted-foreground text-sm">
+                                  <Instagram className="w-4 h-4 mr-2 flex-shrink-0" />
+                                  <span>@it_activa</span>
+                                </div>
+                              </div>
+                            ) : (
+                              <>
+                                <p className="text-foreground font-medium mb-1">
+                                  {info.content}
+                                </p>
+                                <p className="text-muted-foreground text-sm">
+                                  {info.details}
+                                </p>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                      </CardContent>
                       </Card>
                     ))}
                   </div>

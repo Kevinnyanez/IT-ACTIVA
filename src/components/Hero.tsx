@@ -12,7 +12,7 @@ const Hero = () => {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/70 to-gray-700/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/82 to-gray-800/80"></div>
       </div>
 
       {/* Content */}
@@ -22,13 +22,13 @@ const Hero = () => {
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 sm:mb-8">
               La comunicación 
-              <span className="block text-primary">
+              <span className="block text-primary/80 mt-2">
                 transforma la realidad
               </span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-relaxed mb-8 sm:mb-12">
-              Impulsamos tu marca con estrategias digitales, inteligencia artificial 
+              Impulsamos tus ideas y proyectos con estrategias digitales, innovación tecnológica 
               y asesoramiento en gestión pública para gobiernos locales.
             </p>
 
@@ -60,7 +60,7 @@ const Hero = () => {
                   });
                 }}
               >
-                Solicitar Propuesta
+                Solicitá tu propuesta
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-smooth" />
               </Button>
             </div>

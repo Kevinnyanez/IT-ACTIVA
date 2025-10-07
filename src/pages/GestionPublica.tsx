@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Building2, CheckCircle, Target, Users, Globe } from 'lucide-react';
+import { Building2, CheckCircle, Target, Users, Globe, Linkedin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -97,7 +97,7 @@ const GestionPublica = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="page-top" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
@@ -105,7 +105,7 @@ const GestionPublica = () => {
               alt="Gestión Pública" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/70 to-gray-700/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>
           </div>
 
           {/* Content */}
@@ -125,16 +125,16 @@ const GestionPublica = () => {
 
               {/* Value Props */}
               <div className="flex flex-wrap gap-4 mb-8 justify-center">
-                <div className="flex items-center text-white/90">
-                  <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+                <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                  <CheckCircle className="w-5 h-5 mr-2 text-primary flex-shrink-0" />
                   <span>Políticas Públicas</span>
                 </div>
-                <div className="flex items-center text-white/90">
-                  <CheckCircle className="w-5 h-5 mr-2 text-primary" />
-                  <span>Modernización del Estado</span>
+                <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                  <CheckCircle className="w-5 h-5 mr-2 text-primary flex-shrink-0" />
+                  <span>Gestión de proyectos</span>
                 </div>
-                <div className="flex items-center text-white/90">
-                  <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+                <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                  <CheckCircle className="w-5 h-5 mr-2 text-primary flex-shrink-0" />
                   <span>Desarrollo Sostenible</span>
                 </div>
               </div>
@@ -147,10 +147,10 @@ const GestionPublica = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Nuestros Servicios Especializados
+                <strong>Servicios Especializados</strong>
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Soluciones integrales para fortalecer la gestión pública local con enfoque en resultados y desarrollo sostenible
+                Soluciones integrales para fortalecer la gestión pública local con enfoque en resultados y desarrollo estratégico
               </p>
             </div>
 
@@ -178,6 +178,29 @@ const GestionPublica = () => {
                   </CardContent>
                 </Card>
               ))}
+              
+              {/* Call to Action Card - for odd number of services */}
+              {services.length % 2 !== 0 && (
+                <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl h-full flex items-center justify-center">
+                  <CardContent className="text-center py-12">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                      ¿Necesitás asesoramiento personalizado?
+                    </h3>
+                    <p className="text-muted-foreground text-lg mb-6">
+                      Contactanos y descubrí cómo podemos ayudarte
+                    </p>
+                    <Button 
+                      size="lg"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90"
+                      onClick={() => {
+                        window.location.href = '/contacto';
+                      }}
+                    >
+                      Consultá acá
+                    </Button>
+                  </CardContent>
+                </Card>
+              )}
             </div>
           </div>
         </section>
@@ -187,11 +210,8 @@ const GestionPublica = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Nuestra Metodología
+                Metodología
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Un enfoque estructurado y probado para el éxito en la gestión pública
-              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -243,9 +263,9 @@ const GestionPublica = () => {
                   ¿Listo para transformar tu gestión pública?
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                  Contacta con nuestros especialistas y descubre cómo podemos ayudarte a alcanzar tus objetivos de desarrollo local.
+                  Contáctate con nosotros y descubrí cómo podemos ayudarte a alcanzar tus objetivos de desarrollo local.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                   <Button 
                     size="lg" 
                     className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-large"
@@ -265,6 +285,24 @@ const GestionPublica = () => {
                   >
                     Formulario de Contacto
                   </Button>
+                </div>
+                
+                {/* Social Media Icons */}
+                <div className="flex gap-6 justify-center items-center">
+                  <div className="flex items-center text-muted-foreground">
+                    <Facebook className="w-6 h-6" />
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/company/106146305/admin/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                  <div className="flex items-center text-muted-foreground">
+                    <Instagram className="w-6 h-6" />
+                  </div>
                 </div>
               </div>
             </div>

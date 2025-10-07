@@ -107,7 +107,7 @@ const Header = () => {
               className="bg-gradient-accent text-accent-foreground hover:opacity-90 shadow-soft"
             >
               <Link to="/contacto">
-                Consulta Gratuita
+                Consultá acá
               </Link>
             </Button>
           </div>
@@ -175,7 +175,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Link to="/contacto">
-                    Consulta Gratuita
+                    Consultá acá
                   </Link>
                 </Button>
               </div>

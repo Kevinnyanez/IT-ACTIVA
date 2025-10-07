@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MessageSquare, CheckCircle, Mic, Eye, TrendingUp } from 'lucide-react';
+import { MessageSquare, CheckCircle, Mic, Eye, TrendingUp, Linkedin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -70,7 +70,7 @@ const ComunicacionGobiernos = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="page-top" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
@@ -78,7 +78,7 @@ const ComunicacionGobiernos = () => {
               alt="Comunicación Gobiernos" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/70 to-gray-700/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>
           </div>
 
           {/* Content */}
@@ -93,21 +93,21 @@ const ComunicacionGobiernos = () => {
               </h1>
               
               <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
-                Estrategias comunicacionales especializadas para la gestión pública local, fortaleciendo el vínculo con la ciudadanía y posicionando la marca ciudad.
+                Estrategias de comunicación focalizadas para la gestión pública local, fortaleciendo el vínculo con la ciudadanía y posicionando la marca de tu ciudad.
               </p>
 
               {/* Value Props */}
               <div className="flex flex-wrap gap-4 mb-8 justify-center">
-                <div className="flex items-center text-white/90">
-                  <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+                <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                  <CheckCircle className="w-5 h-5 mr-2 text-primary flex-shrink-0" />
                   <span>Estrategias Comunicacionales</span>
                 </div>
-                <div className="flex items-center text-white/90">
-                  <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+                <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                  <CheckCircle className="w-5 h-5 mr-2 text-primary flex-shrink-0" />
                   <span>Marca Ciudad</span>
                 </div>
-                <div className="flex items-center text-white/90">
-                  <CheckCircle className="w-5 h-5 mr-2 text-primary" />
+                <div className="flex items-center text-white/90 bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                  <CheckCircle className="w-5 h-5 mr-2 text-primary flex-shrink-0" />
                   <span>Vínculo Ciudadano</span>
                 </div>
               </div>
@@ -120,10 +120,10 @@ const ComunicacionGobiernos = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Nuestros Servicios Especializados
+                <strong>Servicios Especializados</strong>
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Soluciones comunicacionales integrales para fortalecer la gestión pública local
+                Soluciones comunicacionales integrales para fortalecer la gestión pública local con enfoque estratégico
               </p>
             </div>
 
@@ -135,7 +135,7 @@ const ComunicacionGobiernos = () => {
                       {service.name}
                     </CardTitle>
                     <CardDescription className="text-muted-foreground text-lg">
-                      {service.description}
+                      <strong>{service.description}</strong>
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -152,6 +152,31 @@ const ComunicacionGobiernos = () => {
                 </Card>
               ))}
             </div>
+            
+            {/* Call to Action - always show at bottom for even number */}
+            {services.length % 2 === 0 && (
+              <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl">
+                  <CardContent className="text-center py-12">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                      ¿Necesitás asesoramiento personalizado?
+                    </h3>
+                    <p className="text-muted-foreground text-lg mb-6">
+                      Contactanos y descubrí cómo podemos ayudarte
+                    </p>
+                    <Button 
+                      size="lg"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90"
+                      onClick={() => {
+                        window.location.href = '/contacto';
+                      }}
+                    >
+                      Consultá acá
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
           </div>
         </section>
 
@@ -160,11 +185,8 @@ const ComunicacionGobiernos = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Nuestra Metodología
+                Metodología
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Un enfoque estratégico para la comunicación efectiva en la gestión pública
-              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -216,9 +238,9 @@ const ComunicacionGobiernos = () => {
                   ¿Listo para fortalecer la comunicación de tu gobierno local?
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                  Contacta con nuestros especialistas y descubre cómo podemos ayudarte a mejorar la comunicación con tus ciudadanos.
+                  Contáctate con nosotros y descubrí cómo podemos ayudarte a mejorar la comunicación con tus ciudadanos.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                   <Button 
                     size="lg" 
                     className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-large"
@@ -238,6 +260,24 @@ const ComunicacionGobiernos = () => {
                   >
                     Formulario de Contacto
                   </Button>
+                </div>
+                
+                {/* Social Media Icons */}
+                <div className="flex gap-6 justify-center items-center">
+                  <div className="flex items-center text-muted-foreground">
+                    <Facebook className="w-6 h-6" />
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/company/106146305/admin/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                  <div className="flex items-center text-muted-foreground">
+                    <Instagram className="w-6 h-6" />
+                  </div>
                 </div>
               </div>
             </div>

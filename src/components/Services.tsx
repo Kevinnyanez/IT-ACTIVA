@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Building2, MessageSquare, BarChart3, Megaphone, ArrowRight, Briefcase } from 'lucide-react';
+import { Building2, MessageSquare, BarChart3, Megaphone, ArrowRight, Briefcase, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -91,10 +91,6 @@ const Services = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <span className="text-primary text-sm font-medium">Servicios Especializados</span>
-          </div>
-          
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Nuestros Servicios
           </h2>
@@ -110,15 +106,17 @@ const Services = () => {
             <Card key={index} className="bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group cursor-pointer rounded-2xl border border-gray-200/50 hover:border-primary/20 p-6 lg:p-8">
               <Link to={category.link} className="block">
                 <CardHeader className="pb-4">
-                  <div className="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-300 overflow-hidden shadow-lg">
+                  <div className="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-300 overflow-hidden shadow-lg relative">
                     <img 
                       src={category.image}
                       alt={category.title}
                       className="w-full h-full object-cover rounded-2xl"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 via-gray-800/35 to-gray-700/30 rounded-2xl"></div>
                   </div>
                   <CardTitle className="text-2xl lg:text-4xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {category.title}
+                    <span className="font-bold underline decoration-2 underline-offset-4">{category.title}</span>
+                    <ExternalLink className="inline-block w-6 h-6 lg:w-7 lg:h-7 ml-2 align-middle" />
                   </CardTitle>
                   <CardDescription className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
                     {category.description}
@@ -135,7 +133,7 @@ const Services = () => {
                     {category.services.length > 3 && (
                       <li className="flex items-start text-base lg:text-lg text-primary font-medium">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span>+{category.services.length - 3} servicios más</span>
+                        <span>+ servicios</span>
                       </li>
                     )}
                   </ul>
@@ -143,7 +141,7 @@ const Services = () => {
                     variant="outline" 
                     className="w-full hover:bg-primary hover:text-white group-hover:border-primary group-hover:bg-primary transition-all duration-300 border-gray-300"
                   >
-                    <span>Ver más detalles</span>
+                    <span>Ver detalle</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>

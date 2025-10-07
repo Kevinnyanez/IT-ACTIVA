@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Share2, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -46,7 +46,12 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
+  const contactInfo: Array<{
+    icon: JSX.Element;
+    title: string;
+    content: string;
+    social?: boolean;
+  }> = [
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Dirección",
@@ -63,9 +68,10 @@ const Contact = () => {
       content: "agenciacc.activa@gmail.com"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Horarios",
-      content: "Lun - Vie: 9:00 - 18:00\nConsultas por cita previa"
+      icon: <Share2 className="w-6 h-6" />,
+      title: "RRSS",
+      content: "",
+      social: true
     }
   ];
 
@@ -77,8 +83,8 @@ const Contact = () => {
             Contáctanos
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            ¿Listo para transformar tu empresa? Agenda una consulta gratuita 
-            y descubre cómo podemos ayudarte a alcanzar tus objetivos.
+            ¿Listo para transformar tu proyecto? Agendá 
+            y descubrí cómo podemos ayudarte a alcanzar tus objetivos.
           </p>
         </div>
 
@@ -87,7 +93,7 @@ const Contact = () => {
           <Card className="bg-card shadow-medium">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-foreground">
-                Solicita tu Consulta Gratuita
+                Solicitá tu propuesta
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -205,13 +211,35 @@ const Contact = () => {
                         <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground flex-shrink-0">
                           {info.icon}
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <h4 className="font-semibold text-foreground mb-2">
                             {info.title}
                           </h4>
-                          <p className="text-muted-foreground text-sm whitespace-pre-line">
-                            {info.content}
-                          </p>
+                          {info.social ? (
+                            <div className="flex flex-col space-y-2">
+                              <div className="flex items-center text-muted-foreground text-sm">
+                                <Facebook className="w-4 h-4 mr-2" />
+                                Facebook
+                              </div>
+                              <a 
+                                href="https://www.linkedin.com/company/106146305/admin/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
+                              >
+                                <Linkedin className="w-4 h-4 mr-2" />
+                                LinkedIn
+                              </a>
+                              <div className="flex items-center text-muted-foreground text-sm">
+                                <Instagram className="w-4 h-4 mr-2" />
+                                Instagram
+                              </div>
+                            </div>
+                          ) : (
+                            <p className="text-muted-foreground text-sm whitespace-pre-line">
+                              {info.content}
+                            </p>
+                          )}
                         </div>
                       </div>
                     </CardContent>

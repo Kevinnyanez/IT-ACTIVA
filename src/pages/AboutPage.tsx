@@ -1,4 +1,4 @@
-import { CheckCircle, Target, Lightbulb, BarChart3, HandHeart, Download } from 'lucide-react';
+import { CheckCircle, Target, Lightbulb, BarChart3, HandHeart, Download, Home, Linkedin, Facebook, Instagram } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
@@ -99,8 +99,8 @@ const AboutPage = () => {
       
       <main>
         <PageHero
-          title="Sobre IT ACTIVA"
-          description="Más de 6 años transformando la comunicación y gestión pública. Liderados por Ignacio Tonelli, especialista en comunicación política y gestión gubernamental."
+          title="Consultora en Comunicación y Gestión Pública"
+          description=""
           backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&crop=center&auto=format"
         />
 
@@ -114,13 +114,9 @@ const AboutPage = () => {
                 <img 
                   src="/ACTIVÁ Logo (1).png" 
                   alt="IT ACTIVA Logo" 
-                  className="h-20 w-auto mx-auto"
+                  className="h-32 w-auto mx-auto"
                 />
               </div>
-              
-              <h2 className="text-4xl lg:text-5xl font-light text-foreground mb-6 tracking-tight">
-                Consultora en Comunicación y Gestión Pública
-              </h2>
               
               <div className="w-20 h-0.5 bg-gray-400 mx-auto mb-8"></div>
               
@@ -171,7 +167,7 @@ const AboutPage = () => {
                       <div className="w-12 h-0.5 bg-gray-400 mb-4"></div>
                       
                       <p className="text-gray-600 font-medium text-lg mb-6">
-                        Fundador y Director
+                        Director
                       </p>
                     </div>
                     
@@ -209,8 +205,8 @@ const AboutPage = () => {
                         className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 text-sm font-medium"
                         onClick={() => {
                           const link = document.createElement('a');
-                          link.href = '/cv-ignacio-tonelli.pdf';
-                          link.download = 'CV-Ignacio-Tonelli.pdf';
+                          link.href = '/CV_Ignacio_Tonelli A cf.pdf';
+                          link.download = 'CV_Ignacio_Tonelli.pdf';
                           link.click();
                         }}
                       >
@@ -223,56 +219,45 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Success Steps Section */}
-            <div className="max-w-6xl mx-auto mb-20">
-              <div className="text-center mb-16">
-                <h3 className="text-3xl font-light text-foreground mb-4 tracking-tight">
-                  Nuestro Proceso para el Éxito
-                </h3>
-                <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-6"></div>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Un enfoque estructurado de 5 etapas que garantiza resultados medibles y sostenibles
-                </p>
-              </div>
-
-              <div className="space-y-8">
-                {successSteps.map((step, index) => (
-                  <div key={index} className="bg-white border border-gray-200 shadow-sm">
-                    <div className="p-8">
-                      <div className="flex items-start space-x-6">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gray-100 flex items-center justify-center text-gray-600">
-                            {step.icon}
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center mb-3">
-                            <span className="text-sm font-medium text-gray-500 mr-4">{step.number}</span>
-                            <h4 className="text-xl font-medium text-gray-900">{step.title}</h4>
-                          </div>
-                          <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Cierre / invitación */}
             <div className="max-w-4xl mx-auto mt-20">
               <div className="bg-primary text-white p-12 text-center rounded-xl">
                 <h3 className="text-2xl font-medium mb-4">¿Listo para transformar tu organización?</h3>
                 <p className="text-lg text-white/90 leading-relaxed mb-6">
-                  Con nuestra experiencia y metodología probada, estamos preparados para ayudarte a alcanzar tus objetivos de comunicación y gestión pública.
+                  Tenemos experiencia y estamos preparados para ayudarte a alcanzar tus objetivos de comunicación y gestión pública.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                  <button 
+                    onClick={() => window.location.href = '/'}
+                    className="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  >
+                    <Home className="w-4 h-4 mr-2" />
+                    Volver al Inicio
+                  </button>
                   <button 
                     onClick={() => window.location.href = '/contacto'}
                     className="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                   >
                     Solicitar Consulta
                   </button>
+                </div>
+                
+                {/* Social Media Icons */}
+                <div className="flex gap-6 justify-center items-center pt-6 border-t border-white/20">
+                  <div className="flex items-center text-white/80 hover:text-white transition-colors cursor-pointer">
+                    <Facebook className="w-6 h-6" />
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/company/106146305/admin/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-white/80 hover:text-white transition-colors"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                  <div className="flex items-center text-white/80 hover:text-white transition-colors cursor-pointer">
+                    <Instagram className="w-6 h-6" />
+                  </div>
                 </div>
               </div>
             </div>

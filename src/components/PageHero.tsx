@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 interface PageHeroProps {
   title: string;
   subtitle?: string;
-  description: string;
+  description?: string;
   ctaText?: string;
   ctaAction?: () => void;
   backgroundImage?: string;
@@ -22,7 +22,7 @@ const PageHero = ({
   showBackButton = true 
 }: PageHeroProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="page-top" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -30,7 +30,7 @@ const PageHero = ({
           alt="Fondo de ciudad" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/70 to-gray-700/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>
       </div>
 
       {/* Content */}
@@ -53,9 +53,11 @@ const PageHero = ({
             </h2>
           )}
           
-          <p className="text-lg lg:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            {description}
-          </p>
+          {description && (
+            <p className="text-lg lg:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
+              {description}
+            </p>
+          )}
 
           {ctaAction && (
             <Button 

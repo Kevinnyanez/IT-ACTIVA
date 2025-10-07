@@ -4,7 +4,6 @@ import Services from '@/components/Services';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Process from '@/components/Process';
 import About from '@/components/About';
-import Methodology from '@/components/Methodology';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
@@ -69,7 +68,6 @@ const Index = () => {
         <Services />
         <WhyChooseUs />
         <Process />
-        <Methodology />
         <Contact />
       </main>
       <Footer />

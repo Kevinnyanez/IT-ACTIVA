@@ -8,7 +8,7 @@ const About = () => {
         {/* Header Section */}
         <div className="max-w-5xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-semibold text-foreground mb-4">
-            Consultora en Comunicación y Gestión Pública
+            <strong>Consultora en Comunicación y Gestión Pública</strong>
           </h2>
           
           <h3 className="text-xl font-medium text-primary mb-8">IT ACTIVA</h3>

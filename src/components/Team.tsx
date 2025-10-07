@@ -10,7 +10,7 @@ const Team = () => {
     image: "/foto perfil IT (1).jpg",
     linkedin: "#",
     email: "ignacio@itactiva.com",
-    cvUrl: "/cv-ignacio-tonelli.pdf", // URL del CV
+    cvUrl: "/CV_Ignacio_Tonelli A cf.pdf", // URL del CV
     specialties: [
       "Comunicación Política",
       "Gestión Pública", 

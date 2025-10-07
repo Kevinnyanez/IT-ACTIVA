@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -18,7 +18,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/company/106146305/admin/", name: "LinkedIn - IT ACTIVA | Consultora" }
+    { icon: <Facebook className="w-5 h-5" />, href: "#", name: "Facebook - IT ACTIVA | Consultora" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/company/106146305/admin/", name: "LinkedIn - IT ACTIVA | Consultora" },
+    { icon: <Instagram className="w-5 h-5" />, href: "#", name: "Instagram - IT ACTIVA | Consultora" }
   ];
 
   return (

@@ -15,7 +15,10 @@ import {
   Globe,
   Lightbulb,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Linkedin,
+  Facebook,
+  Instagram
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -138,16 +141,41 @@ const EmpresasPage = () => {
       <Header />
       
       <main>
-        <PageHero
-          title="Plan Empresas y Organizaciones"
-          subtitle="Transformamos la comunicación empresarial"
-          description="En un entorno cada vez más competitivo y cambiante, la comunicación estratégica se vuelve un pilar clave para crecer, diferenciarse y sostenerse. Desde IT ACTIVA acompañamos a empresas y organizaciones con una propuesta integral, combinando innovación, análisis y ejecución para resolver desafíos reales y posicionarlas con fuerza en su sector."
-          ctaText="Contactanos"
-          ctaAction={() => {
-            window.location.href = '/contacto';
-          }}
-          backgroundImage="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&h=1080&fit=crop&crop=center&auto=format"
-        />
+        <section id="page-top" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&h=1080&fit=crop&crop=center&auto=format" 
+              alt="Plan Empresas" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+                Plan Empresas y Organizaciones
+              </h1>
+              
+              <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-8">
+                Transformamos la comunicación empresarial
+              </h2>
+              
+              <p className="text-lg lg:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
+                IT ACTIVA acompaña a empresas y organizaciones con una propuesta integral, combinando innovación, análisis y ejecución para resolver desafíos reales y posicionarlas con fuerza en su sector.
+              </p>
+
+              <Button 
+                size="lg" 
+                className="bg-primary text-white hover:bg-primary/90 shadow-large group"
+                onClick={() => window.location.href = '/contacto'}
+              >
+                Contactanos
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+        </section>
 
         {/* Purpose Section */}
         <section className="py-16 bg-background">
@@ -188,7 +216,7 @@ const EmpresasPage = () => {
                     {service.title}
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground leading-relaxed">
-                    {service.description}
+                    <strong>{service.description}</strong>
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
@@ -203,6 +231,29 @@ const EmpresasPage = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          {/* Call to Action - odd number of services */}
+          <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl">
+              <CardContent className="text-center py-12">
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                  ¿Necesitás asesoramiento personalizado?
+                </h3>
+                <p className="text-muted-foreground text-lg mb-6">
+                  Contactanos y descubrí cómo podemos ayudarte
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  onClick={() => {
+                    window.location.href = '/contacto';
+                  }}
+                >
+                  Consultá acá
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -248,9 +299,6 @@ const EmpresasPage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
               Propuesta de Valor como Consultor
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Acompañamiento estratégico continuo para el crecimiento de tu empresa
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -282,7 +330,7 @@ const EmpresasPage = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
               En cada paso, trabajamos para que tu empresa no solo comunique mejor, sino que genere impacto, transforme su entorno y cuente historias que trasciendan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-large"
@@ -303,6 +351,24 @@ const EmpresasPage = () => {
               >
                 Formulario de Contacto
               </Button>
+            </div>
+            
+            {/* Social Media Icons */}
+            <div className="flex gap-6 justify-center items-center">
+              <div className="flex items-center text-muted-foreground">
+                <Facebook className="w-6 h-6" />
+              </div>
+              <a 
+                href="https://www.linkedin.com/company/106146305/admin/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <div className="flex items-center text-muted-foreground">
+                <Instagram className="w-6 h-6" />
+              </div>
             </div>
           </div>
         </div>

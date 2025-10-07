@@ -5,18 +5,8 @@ const WhyChooseUs = () => {
   const reasons = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Enfoque Especializado",
-      description: "Nos especializamos exclusivamente en gestión pública y comunicación política, garantizando expertise profundo en cada proyecto."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Equipo Multidisciplinario",
-      description: "Contamos con profesionales de diversas áreas: comunicación, políticas públicas, análisis político y gestión institucional."
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Soluciones Innovadoras",
-      description: "Aplicamos metodologías modernas y herramientas digitales para abordar los desafíos actuales de la gestión pública."
+      title: "Enfoque",
+      description: "Nos especializamos en gestión pública y comunicación política, garantizando expertise profundo en cada proyecto."
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -30,8 +20,8 @@ const WhyChooseUs = () => {
     },
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: "Experiencia Comprobada",
-      description: "Más de 6 años trabajando con gobiernos locales, con casos de éxito documentados en toda la región."
+      title: "Experiencia",
+      description: "Más de una década trabajando en gobiernos locales y gestión pública en diferentes dimensiones."
     }
   ];
 
@@ -43,11 +33,11 @@ const WhyChooseUs = () => {
             ¿Por qué elegirnos?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nos distinguimos por nuestra experiencia, metodología y compromiso con la excelencia
+            Nos distinguimos por nuestra experiencia, metodología y compromiso
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <Card key={index} className="bg-card hover:shadow-medium transition-smooth group rounded-xl">
               <CardHeader>
