@@ -57,6 +57,16 @@ const ComunicacionPoliticaCampanas = () => {
         "Posicionamiento estratégico",
         "Transparencia comunicacional"
       ]
+    },
+    {
+      name: "Desarrollo de Encuestas de opinión",
+      description: "Implementación de herramientas cualitativas y cuantitativas para captar las percepciones ciudadanas y orientar decisiones estratégicas.",
+      icon: BarChart3,
+      benefits: [
+        "Herramientas cualitativas y cuantitativas",
+        "Percepciones ciudadanas",
+        "Decisiones estratégicas orientadas"
+      ]
     }
   ];
 
@@ -69,16 +79,6 @@ const ComunicacionPoliticaCampanas = () => {
         "Estrategias de agenda pública",
         "Mensajes efectivos",
         "Liderazgo consolidado"
-      ]
-    },
-    {
-      name: "Desarrollo de Encuestas de opinión",
-      description: "Implementación de herramientas cualitativas y cuantitativas para captar las percepciones ciudadanas y orientar decisiones estratégicas.",
-      icon: BarChart3,
-      benefits: [
-        "Herramientas cualitativas y cuantitativas",
-        "Percepciones ciudadanas",
-        "Decisiones estratégicas orientadas"
       ]
     },
     {
@@ -176,23 +176,88 @@ const ComunicacionPoliticaCampanas = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {mainServices.map((service, index) => {
                 const IconComponent = service.icon;
                 return (
-                  <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border/50 rounded-xl h-full">
-                    <CardHeader className="pb-4">
-                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mb-4">
-                        <IconComponent className="w-6 h-6" />
-                      </div>
-                      <CardTitle className="text-xl lg:text-2xl font-semibold text-foreground leading-tight">
+                  <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border rounded-xl">
+                    <CardHeader>
+                      <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
                         {service.name}
                       </CardTitle>
+                      <CardDescription className="text-muted-foreground text-lg">
+                        <strong>{service.description}</strong>
+                      </CardDescription>
                     </CardHeader>
-                    <CardContent className="pt-0">
-                      <p className="text-muted-foreground text-base mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <h4 className="font-medium text-foreground text-lg">Beneficios principales:</h4>
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
+                            <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+            
+            {/* Call to Action - always show at bottom for even number */}
+            {mainServices.length % 2 === 0 && (
+              <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl">
+                  <CardContent className="text-center py-12">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                      ¿Necesitás asesoramiento personalizado?
+                    </h3>
+                    <p className="text-muted-foreground text-lg mb-6">
+                      Contactanos y descubrí cómo podemos ayudarte
+                    </p>
+                    <Button 
+                      size="lg"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90"
+                      onClick={() => {
+                        window.location.href = '/contacto';
+                      }}
+                    >
+                      Consultá acá
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Additional Services Section */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <strong>Servicios Complementarios</strong>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Herramientas especializadas para fortalecer tu presencia política y maximizar el impacto de tu mensaje
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {additionalServices.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border rounded-xl">
+                    <CardHeader>
+                      <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
+                        {service.name}
+                      </CardTitle>
+                      <CardDescription className="text-muted-foreground text-lg">
+                        <strong>{service.description}</strong>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
                       <div className="space-y-3">
                         <h4 className="font-medium text-foreground text-sm uppercase tracking-wide">Beneficios principales:</h4>
                         {service.benefits.map((benefit, benefitIndex) => (
@@ -240,9 +305,9 @@ const ComunicacionPoliticaCampanas = () => {
                         {service.description}
                       </p>
                       <div className="space-y-3">
-                        <h4 className="font-medium text-foreground text-sm uppercase tracking-wide">Beneficios principales:</h4>
+                        <h4 className="font-medium text-foreground text-lg">Beneficios principales:</h4>
                         {service.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center text-sm text-muted-foreground">
+                          <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
                             <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
                             <span>{benefit}</span>
                           </div>
@@ -253,73 +318,50 @@ const ComunicacionPoliticaCampanas = () => {
                 );
               })}
             </div>
-            
-            {/* Call to Action */}
-            <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl">
-                <CardContent className="text-center py-12">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                    ¿Necesitás asesoramiento personalizado?
-                  </h3>
-                  <p className="text-muted-foreground text-lg mb-6">
-                    Contactanos y descubrí cómo podemos ayudarte
-                  </p>
-                  <Button 
-                    size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90"
-                    onClick={() => {
-                      window.location.href = '/contacto';
-                    }}
-                  >
-                    Consultá acá
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </section>
 
         {/* Methodology Section */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Metodología
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="bg-card text-center p-6 border border-border/50 rounded-xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="bg-card text-center p-8 border border-border rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <Megaphone className="w-6 h-6" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <Megaphone className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Estrategia</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Estrategia</h3>
+                  <p className="text-muted-foreground text-lg">
                     Desarrollo de estrategias integrales de comunicación, análisis de audiencias y planificación de campañas políticas.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-card text-center p-6 border border-border/50 rounded-xl">
+              <Card className="bg-card text-center p-8 border border-border rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <MessageSquare className="w-6 h-6" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <MessageSquare className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Contenido</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Contenido</h3>
+                  <p className="text-muted-foreground text-lg">
                     Creación de mensajes claros, storytelling efectivo y desarrollo de contenido para todos los canales de comunicación.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-card text-center p-6 border border-border/50 rounded-xl">
+              <Card className="bg-card text-center p-8 border border-border rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Ejecución</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Ejecución</h3>
+                  <p className="text-muted-foreground text-lg">
                     Implementación de campañas, coaching personalizado y seguimiento continuo para maximizar el impacto político.
                   </p>
                 </CardContent>
@@ -363,9 +405,14 @@ const ComunicacionPoliticaCampanas = () => {
                 
                 {/* Social Media Icons */}
                 <div className="flex gap-6 justify-center items-center">
-                  <div className="flex items-center text-muted-foreground">
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61582131955493" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Facebook className="w-6 h-6" />
-                  </div>
+                  </a>
                   <a 
                     href="https://www.linkedin.com/company/106146305/admin/" 
                     target="_blank" 
@@ -374,9 +421,14 @@ const ComunicacionPoliticaCampanas = () => {
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
-                  <div className="flex items-center text-muted-foreground">
+                  <a 
+                    href="https://www.instagram.com/itactiva/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Instagram className="w-6 h-6" />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

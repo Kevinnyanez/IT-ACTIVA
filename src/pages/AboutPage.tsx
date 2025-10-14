@@ -114,7 +114,7 @@ const AboutPage = () => {
                 <img 
                   src="/ACTIVÁ Logo (1).png" 
                   alt="IT ACTIVA Logo" 
-                  className="h-32 w-auto mx-auto"
+                  className="h-48 w-auto mx-auto"
                 />
               </div>
               
@@ -125,17 +125,17 @@ const AboutPage = () => {
 
               {/* Descripción principal */}
               <div className="space-y-8 mb-16">
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto font-semibold">
                   IT Activa propone un trabajo colaborativo donde las definiciones se construyan en conjunto, 
                   con el objetivo de generar una dinámica de comunicación fluida, transparente y de alto impacto hacia la comunidad.
                 </p>
                 
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto font-semibold">
                   Proponemos que nuestros servicios desarrollen, impulsen y potencien las capacidades y condiciones de nuestros clientes, 
                   para consolidar una visión clara, de impacto positivo en las acciones y en la imagen que proyecta.
                 </p>
                 
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto font-semibold">
                   La comunicación produce sentidos, transmite emociones y construye identidad. La gestión transforma la realidad. 
                   Juntas, desarrollan historias positivas en la comunidad.
                 </p>
@@ -244,9 +244,14 @@ const AboutPage = () => {
                 
                 {/* Social Media Icons */}
                 <div className="flex gap-6 justify-center items-center pt-6 border-t border-white/20">
-                  <div className="flex items-center text-white/80 hover:text-white transition-colors cursor-pointer">
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61582131955493" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-white/80 hover:text-white transition-colors"
+                  >
                     <Facebook className="w-6 h-6" />
-                  </div>
+                  </a>
                   <a 
                     href="https://www.linkedin.com/company/106146305/admin/" 
                     target="_blank" 
@@ -255,9 +260,14 @@ const AboutPage = () => {
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
-                  <div className="flex items-center text-white/80 hover:text-white transition-colors cursor-pointer">
+                  <a 
+                    href="https://www.instagram.com/itactiva/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-white/80 hover:text-white transition-colors"
+                  >
                     <Instagram className="w-6 h-6" />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

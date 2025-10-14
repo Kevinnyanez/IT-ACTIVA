@@ -62,7 +62,7 @@ const ServicesPage = () => {
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Comunicación Política y Análisis",
       description: "Estrategias digitales, gestión de contenidos y análisis político especializado.",
-      link: "/servicios/comunicacion-politica",
+      link: "/servicios/comunicacion-politica-campanas",
       highlights: [
         "Estrategias Digitales",
         "Gestión de Contenidos",

@@ -1,80 +1,12 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Share2, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Share2, Linkedin, Facebook, Instagram } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const ContactPage = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    organization: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      // Crear el enlace de mailto con todos los datos del formulario
-      const subject = `Nueva consulta de ${formData.name} - ${formData.service}`;
-      const body = `
-Nombre: ${formData.name}
-Email: ${formData.email}
-Organización: ${formData.organization || 'No especificada'}
-Teléfono: ${formData.phone || 'No especificado'}
-Servicio de interés: ${formData.service || 'No especificado'}
-
-Mensaje:
-${formData.message}
-
----
-Enviado desde el sitio web de IT ACTIVA
-      `.trim();
-
-      const mailtoLink = `mailto:agenciacc.activa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Abrir el cliente de email del usuario
-      window.location.href = mailtoLink;
-      
-      toast({
-        title: "¡Formulario completado!",
-        description: "Se abrirá tu cliente de email para enviar el mensaje.",
-      });
-
-      setFormData({
-        name: '',
-        email: '',
-        organization: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Hubo un problema al procesar el formulario. Inténtalo de nuevo.",
-        variant: "destructive"
-      });
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const contactInfo = [
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -114,14 +46,6 @@ Enviado desde el sitio web de IT ACTIVA
     }
   ];
 
-  const services = [
-    "Gestión Pública y Gobiernos Locales",
-    "Comunicación para Gobiernos Locales",
-    "Comunicación Política y Campañas", 
-    "Plan Empresas y Organizaciones",
-    "Otro (especificar en mensaje)"
-  ];
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -131,7 +55,7 @@ Enviado desde el sitio web de IT ACTIVA
           title="Contacto"
           subtitle=""
           description="Dejanos tu mensaje y diseñemos juntos la estrategia que tu proyecto necesita. Estamos listos para acompañarte en cada paso."
-          ctaText="Enviar Mensaje"
+          ctaText="Completar Formulario"
           backgroundImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&h=1080&fit=crop&crop=center&auto=format"
           ctaAction={() => {
             document.querySelector('#contact-form')?.scrollIntoView({
@@ -141,7 +65,7 @@ Enviado desde el sitio web de IT ACTIVA
         />
 
         {/* Contact Form & Info */}
-        <section className="py-24 bg-background">
+        <section id="contact-form" className="py-24 bg-background">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Contact Form */}
@@ -152,99 +76,70 @@ Enviado desde el sitio web de IT ACTIVA
                       Envíanos tu consulta
                     </CardTitle>
                     <p className="text-muted-foreground">
-                      Completa el formulario y nos pondremos en contacto contigo
+                      Completa nuestro formulario de contacto y nos pondremos en contacto contigo en las próximas 24 horas.
                     </p>
                   </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-foreground">Nombre *</label>
-                          <Input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            placeholder="Tu nombre completo"
-                            className="border-border focus:ring-primary/20 focus:border-primary"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-foreground">Email *</label>
-                          <Input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            placeholder="tu@email.com"
-                            className="border-border focus:ring-primary/20 focus:border-primary"
-                          />
-                        </div>
-                      </div>
+                  <CardContent className="space-y-6">
+                    <div className="bg-primary/5 rounded-lg p-8 border-2 border-primary/20">
+                      <h3 className="text-xl font-semibold text-foreground mb-4">
+                        ¿Qué información necesitamos?
+                      </h3>
+                      <ul className="space-y-3 text-base text-muted-foreground">
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 text-xl">•</span>
+                          <span>Tu nombre y datos de contacto</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 text-xl">•</span>
+                          <span>Organización o empresa</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 text-xl">•</span>
+                          <span>Servicio de interés</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 text-xl">•</span>
+                          <span>Descripción de tu proyecto o necesidad</span>
+                        </li>
+                      </ul>
+                    </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-foreground">Organización</label>
-                          <Input
-                            type="text"
-                            name="organization"
-                            value={formData.organization}
-                            onChange={handleChange}
-                            placeholder="Municipio, gobierno, empresa"
-                            className="border-border focus:ring-primary/20 focus:border-primary"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-foreground">Teléfono</label>
-                          <Input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            placeholder="+54 11 1234 5678"
-                            className="border-border focus:ring-primary/20 focus:border-primary"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-foreground">Servicio de Interés</label>
-                        <select
-                          name="service"
-                          value={formData.service}
-                          onChange={handleChange}
-                          className="w-full px-3 py-2 border border-border bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-foreground"
-                        >
-                          <option value="">Selecciona un servicio</option>
-                          {services.map((service, index) => (
-                            <option key={index} value={service}>{service}</option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-foreground">Mensaje *</label>
-                        <Textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          rows={5}
-                          placeholder="Cuéntanos sobre tu proyecto, desafíos actuales y objetivos..."
-                          className="border-border focus:ring-primary/20 focus:border-primary resize-none"
-                        />
-                      </div>
-
-                      <Button 
-                        type="submit" 
-                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-3 shadow-medium"
+                    <div className="text-center py-4">
+                      <Button
+                        size="lg"
+                        onClick={() => window.open('https://forms.gle/sZVV2sJtLSSpkNrK8', '_blank')}
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-large px-8 py-6 text-lg font-semibold"
                       >
-                        <Send className="w-4 h-4 mr-2" />
-                        Enviar Consulta
+                        Completar Formulario de Contacto
                       </Button>
-                    </form>
+                      <p className="text-sm text-muted-foreground mt-3">
+                        Se abrirá en una nueva pestaña
+                      </p>
+                    </div>
+
+                    <div className="border-t pt-6">
+                      <h4 className="font-semibold text-foreground mb-4">
+                        ¿Por qué elegirnos?
+                      </h4>
+                      <div className="grid grid-cols-1 gap-3 text-sm text-muted-foreground">
+                        <div className="flex items-center">
+                          <span className="text-primary mr-2">✓</span>
+                          Primera consulta diagnóstica gratuita
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-primary mr-2">✓</span>
+                          Respuesta garantizada en 24 horas
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-primary mr-2">✓</span>
+                          Soluciones personalizadas a tu medida
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-primary mr-2">✓</span>
+                          Equipo experto con años de experiencia
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -268,48 +163,58 @@ Enviado desde el sitio web de IT ACTIVA
                           }
                         }}
                       >
-                        <CardContent className="p-0"                      >
-                        <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground flex-shrink-0 shadow-soft">
-                            {info.icon}
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="font-semibold text-foreground mb-1">
-                              {info.title}
-                            </h4>
-                            {info.social ? (
-                              <div className="flex flex-col space-y-2 mt-2">
-                                <div className="flex items-center text-muted-foreground text-sm">
-                                  <Facebook className="w-4 h-4 mr-2 flex-shrink-0" />
-                                  <span>IT ACTIVA | Consultora</span>
+                        <CardContent className="p-0">
+                          <div className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground flex-shrink-0 shadow-soft">
+                              {info.icon}
+                            </div>
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-foreground mb-1">
+                                {info.title}
+                              </h4>
+                              {info.social ? (
+                                <div className="flex flex-col space-y-2 mt-2">
+                                  <a 
+                                    href="https://www.facebook.com/profile.php?id=61582131955493" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
+                                  >
+                                    <Facebook className="w-4 h-4 mr-2 flex-shrink-0" />
+                                    <span>IT ACTIVA | Consultora</span>
+                                  </a>
+                                  <a 
+                                    href="https://www.linkedin.com/company/106146305/admin/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
+                                  >
+                                    <Linkedin className="w-4 h-4 mr-2 flex-shrink-0" />
+                                    <span>IT ACTIVA | Consultora</span>
+                                  </a>
+                                  <a 
+                                    href="https://www.instagram.com/itactiva/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
+                                  >
+                                    <Instagram className="w-4 h-4 mr-2 flex-shrink-0" />
+                                    <span>@itactiva</span>
+                                  </a>
                                 </div>
-                                <a 
-                                  href="https://www.linkedin.com/company/106146305/admin/" 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
-                                >
-                                  <Linkedin className="w-4 h-4 mr-2 flex-shrink-0" />
-                                  <span>IT ACTIVA | Consultora</span>
-                                </a>
-                                <div className="flex items-center text-muted-foreground text-sm">
-                                  <Instagram className="w-4 h-4 mr-2 flex-shrink-0" />
-                                  <span>@it_activa</span>
-                                </div>
-                              </div>
-                            ) : (
-                              <>
-                                <p className="text-foreground font-medium mb-1">
-                                  {info.content}
-                                </p>
-                                <p className="text-muted-foreground text-sm">
-                                  {info.details}
-                                </p>
-                              </>
-                            )}
+                              ) : (
+                                <>
+                                  <p className="text-foreground font-medium mb-1">
+                                    {info.content}
+                                  </p>
+                                  <p className="text-muted-foreground text-sm">
+                                    {info.details}
+                                  </p>
+                                </>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </CardContent>
+                        </CardContent>
                       </Card>
                     ))}
                   </div>

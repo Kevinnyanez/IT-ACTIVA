@@ -198,7 +198,7 @@ const EmpresasPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Servicios
+              <strong>Servicios Especializados</strong>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Soluciones integrales para transformar la comunicación de tu empresa
@@ -207,27 +207,25 @@ const EmpresasPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {services.map((service, index) => (
-              <Card key={index} className="bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group rounded-2xl border border-gray-200/50 hover:border-primary/20">
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-all duration-300">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground group-hover:text-primary transition-colors">
+              <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border rounded-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-lg text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-muted-foreground text-lg">
                     <strong>{service.description}</strong>
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="space-y-2">
+                <CardContent>
+                  <div className="space-y-3">
+                    <h4 className="font-medium text-foreground text-lg">Beneficios principales:</h4>
                     {service.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start text-base text-muted-foreground">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      <div key={detailIndex} className="flex items-center text-base text-muted-foreground">
+                        <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
                         <span>{detail}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -320,8 +318,57 @@ const EmpresasPage = () => {
         </div>
       </section>
 
+      {/* Methodology Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Metodología
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-card text-center p-8 border border-border rounded-xl">
+              <CardContent className="p-0">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <Search className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Diagnóstico</h3>
+                <p className="text-muted-foreground text-lg">
+                  Análisis profundo de la situación comunicacional actual y detección de oportunidades de mejora para tu empresa.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card text-center p-8 border border-border rounded-xl">
+              <CardContent className="p-0">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <Calendar className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Planificación</h3>
+                <p className="text-muted-foreground text-lg">
+                  Diseño de estrategias personalizadas con objetivos claros, cronogramas y presupuestos adaptados a tu organización.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card text-center p-8 border border-border rounded-xl">
+              <CardContent className="p-0">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Ejecución</h3>
+                <p className="text-muted-foreground text-lg">
+                  Implementación de soluciones con monitoreo continuo y ajustes estratégicos para maximizar el impacto.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
-      <section className="py-24 bg-gradient-to-br from-muted/30 via-background to-muted/30">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
@@ -355,9 +402,14 @@ const EmpresasPage = () => {
             
             {/* Social Media Icons */}
             <div className="flex gap-6 justify-center items-center">
-              <div className="flex items-center text-muted-foreground">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61582131955493" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Facebook className="w-6 h-6" />
-              </div>
+              </a>
               <a 
                 href="https://www.linkedin.com/company/106146305/admin/" 
                 target="_blank" 
@@ -366,9 +418,14 @@ const EmpresasPage = () => {
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <div className="flex items-center text-muted-foreground">
+              <a 
+                href="https://www.instagram.com/itactiva/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Instagram className="w-6 h-6" />
-              </div>
+              </a>
             </div>
           </div>
         </div>

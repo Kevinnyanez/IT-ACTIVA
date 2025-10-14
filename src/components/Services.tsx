@@ -12,15 +12,15 @@ const Services = () => {
       description: "Transformamos la gestión pública desde lo local. Acompañamos a municipios y organismos en el diseño e implementación de políticas públicas basadas en evidencia.",
       link: "/servicios/gestion-publica",
       services: [
-        "Informes de Gestión y Seguimiento de Metas",
-        "Diseño, Análisis y Monitoreo de Políticas Públicas",
-        "Fortalecimiento de Relaciones Interjurisdiccionales",
-        "Políticas de Educación Superior, Juventudes y Proyectos Especiales",
-        "Internacionalización de la Gestión e Implementación de ODS",
-        "Articulación y Desarrollo Legislativo para Gobiernos",
-        "Asesoramiento Integral en Programas y Proyectos de Gestión",
-        "Estrategias Digitales y Políticas de Modernización",
-        "Participación Ciudadana e Implementación de Presupuesto Participativo"
+        "<strong>Informes de Gestión</strong> y Seguimiento de Metas",
+        "<strong>Diseño, Análisis y Monitoreo</strong> de Políticas Públicas",
+        "<strong>Fortalecimiento de Relaciones</strong> Interjurisdiccionales",
+        "<strong>Políticas de Educación Superior,</strong> Juventudes y Proyectos Especiales",
+        "<strong>Internacionalización de la Gestión</strong> e Implementación de ODS",
+        "<strong>Articulación y Desarrollo Legislativo</strong> para Gobiernos",
+        "<strong>Asesoramiento Integral</strong> en Programas y Proyectos de Gestión",
+        "<strong>Estrategias Digitales</strong> y Políticas de Modernización",
+        "<strong>Participación Ciudadana</strong> e Implementación de Presupuesto Participativo"
       ]
     },
     {
@@ -30,16 +30,16 @@ const Services = () => {
       description: "Comunicamos para transformar. Diseñamos estrategias de comunicación a medida para gobiernos locales, dirigentes y equipos.",
       link: "/servicios/comunicacion-gobiernos",
       services: [
-        "Análisis de Coyuntura y Clipping de Prensa",
-        "Desarrollo de Estrategias de Comunicación Personalizadas",
-        "Comunicación Interna y Externa para Equipos de Trabajo",
-        "Fortalecimiento de la Marca Ciudad y Desarrollo Local",
-        "Periodismo de Ciudades",
-        "Asesoramiento en Comunicación Política",
-        "Identificación de Problemáticas y Propuestas de Soluciones Efectivas",
-        "Comunicación de Cercanía y Periodismo de Soluciones",
-        "Gestión y Comunicación de Crisis",
-        "Coordinación y Diseño de Producciones Audiovisuales"
+        "<strong>Análisis de Coyuntura</strong> y Clipping de Prensa",
+        "<strong>Desarrollo de Estrategias</strong> de Comunicación Personalizadas",
+        "<strong>Comunicación Interna y Externa</strong> para Equipos de Trabajo",
+        "<strong>Fortalecimiento de la Marca Ciudad</strong> y Desarrollo Local",
+        "<strong>Periodismo de Ciudades</strong>",
+        "<strong>Asesoramiento</strong> en Comunicación Política",
+        "<strong>Identificación de Problemáticas</strong> y Propuestas de Soluciones Efectivas",
+        "<strong>Comunicación de Cercanía</strong> y Periodismo de Soluciones",
+        "<strong>Gestión y Comunicación de Crisis</strong>",
+        "<strong>Coordinación y Diseño</strong> de Producciones Audiovisuales"
       ]
     },
     {
@@ -47,18 +47,18 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&crop=center&auto=format",
       title: "Comunicación Política y Campañas",
       description: "Tu proyecto político necesita una estrategia que comunique y escuche. Impulsamos tu presencia pública a través de contenidos, segmentación de audiencias y análisis.",
-      link: "/servicios/comunicacion-politica",
+      link: "/servicios/comunicacion-politica-campanas",
       services: [
-        "Estrategias de Comunicación y Creación de Contenido",
-        "Identificación de Públicos y Audiencias",
-        "Storytelling y Storydoing",
-        "Clipping de Prensa, Notas y Artículos. Monitoreo de Medios",
-        "Estrategias Digitales y Gestión de Social Media",
-        "Posicionamiento y Desarrollo del Discurso Público",
-        "Desarrollo de Encuestas de Opinión",
-        "Debate Electoral: Puntos Clave y Coaching",
-        "Oratoria para Conectar con tu Público",
-        "Plataforma de Gobierno de Alto Impacto"
+        "<strong>Estrategias de Comunicación</strong> y Creación de Contenido",
+        "<strong>Identificación de Públicos</strong> y Audiencias",
+        "<strong>Storytelling y Storydoing</strong>",
+        "<strong>Clipping de Prensa,</strong> Notas y Artículos. Monitoreo de Medios",
+        "<strong>Estrategias Digitales</strong> y Gestión de Social Media",
+        "<strong>Posicionamiento y Desarrollo</strong> del Discurso Público",
+        "<strong>Desarrollo de Encuestas</strong> de Opinión",
+        "<strong>Debate Electoral:</strong> Puntos Clave y Coaching",
+        "<strong>Oratoria</strong> para Conectar con tu Público",
+        "<strong>Plataforma de Gobierno</strong> de Alto Impacto"
       ]
     },
     {
@@ -68,13 +68,13 @@ const Services = () => {
       description: "Transformamos la comunicación empresarial con propuestas integrales que combinan innovación, análisis y ejecución.",
       link: "/servicios/empresas",
       services: [
-        "Diagnóstico y Auditoría de Comunicación",
-        "Planificación Estratégica y Ejecución",
-        "Marketing Digital y Publicidad Online",
-        "Comunicación Interna y Modernización Digital",
-        "Relacionamiento Institucional y Asuntos Públicos",
-        "Gestión Sostenible y RSE",
-        "Innovación y Herramientas Tecnológicas"
+        "<strong>Diagnóstico y Auditoría</strong> de Comunicación",
+        "<strong>Planificación Estratégica</strong> y Ejecución",
+        "<strong>Marketing Digital</strong> y Publicidad Online",
+        "<strong>Comunicación Interna</strong> y Modernización Digital",
+        "<strong>Relacionamiento Institucional</strong> y Asuntos Públicos",
+        "<strong>Gestión Sostenible</strong> y RSE",
+        "<strong>Innovación y Herramientas Tecnológicas</strong>"
       ]
     }
   ];
@@ -118,16 +118,16 @@ const Services = () => {
                     <span className="font-bold underline decoration-2 underline-offset-4">{category.title}</span>
                     <ExternalLink className="inline-block w-6 h-6 lg:w-7 lg:h-7 ml-2 align-middle" />
                   </CardTitle>
-                  <CardDescription className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-lg lg:text-xl text-foreground leading-relaxed font-semibold">
                     {category.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <ul className="space-y-3 mb-6">
                     {category.services.slice(0, 3).map((service, serviceIndex) => (
-                      <li key={serviceIndex} className="flex items-start text-base lg:text-lg text-muted-foreground">
+                      <li key={serviceIndex} className="flex items-start text-base lg:text-lg text-foreground font-semibold">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span>{service}</span>
+                        <span dangerouslySetInnerHTML={{ __html: service }}></span>
                       </li>
                     ))}
                     {category.services.length > 3 && (

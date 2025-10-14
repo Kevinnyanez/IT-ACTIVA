@@ -10,7 +10,7 @@ const Logo = ({ variant = 'default', className = '', linkTo = '/' }: LogoProps) 
   const getVariantClasses = () => {
     switch (variant) {
       case 'header':
-        return 'h-12 sm:h-16 lg:h-18 w-auto max-w-[280px]';
+        return 'h-16 sm:h-20 lg:h-24 w-auto max-w-[400px]';
       case 'footer':
         return 'h-14 w-auto max-w-[240px]';
       default:

@@ -143,7 +143,7 @@ const ComunicacionGobiernos = () => {
                       <h4 className="font-medium text-foreground text-lg">Beneficios principales:</h4>
                       {service.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>
                       ))}
@@ -264,9 +264,14 @@ const ComunicacionGobiernos = () => {
                 
                 {/* Social Media Icons */}
                 <div className="flex gap-6 justify-center items-center">
-                  <div className="flex items-center text-muted-foreground">
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61582131955493" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Facebook className="w-6 h-6" />
-                  </div>
+                  </a>
                   <a 
                     href="https://www.linkedin.com/company/106146305/admin/" 
                     target="_blank" 
@@ -275,9 +280,14 @@ const ComunicacionGobiernos = () => {
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
-                  <div className="flex items-center text-muted-foreground">
+                  <a 
+                    href="https://www.instagram.com/itactiva/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Instagram className="w-6 h-6" />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

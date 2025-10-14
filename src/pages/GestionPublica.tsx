@@ -156,18 +156,18 @@ const GestionPublica = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {services.map((service, index) => (
-                <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border/50 rounded-xl h-full">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground leading-tight">
+                <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border rounded-xl">
+                  <CardHeader>
+                    <CardTitle className="text-2xl lg:text-3xl font-semibold text-foreground">
                       {service.name}
                     </CardTitle>
+                    <CardDescription className="text-muted-foreground text-lg">
+                      <strong>{service.description}</strong>
+                    </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
+                  <CardContent>
                     <div className="space-y-3">
-                      <h4 className="font-medium text-foreground text-base uppercase tracking-wide">Beneficios principales:</h4>
+                      <h4 className="font-medium text-foreground text-lg">Beneficios principales:</h4>
                       {service.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
                           <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
@@ -178,10 +178,12 @@ const GestionPublica = () => {
                   </CardContent>
                 </Card>
               ))}
-              
-              {/* Call to Action Card - for odd number of services */}
-              {services.length % 2 !== 0 && (
-                <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl h-full flex items-center justify-center">
+            </div>
+            
+            {/* Call to Action - always show at bottom for odd number */}
+            {services.length % 2 !== 0 && (
+              <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 hover:shadow-medium transition-all duration-300 border-2 border-primary/30 rounded-xl">
                   <CardContent className="text-center py-12">
                     <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                       ¿Necesitás asesoramiento personalizado?
@@ -200,52 +202,52 @@ const GestionPublica = () => {
                     </Button>
                   </CardContent>
                 </Card>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </section>
 
         {/* Methodology Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Metodología
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="bg-card text-center p-6 border border-border/50 rounded-xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="bg-card text-center p-8 border border-border rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <Target className="w-6 h-6" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <Target className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Diagnóstico</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Diagnóstico</h3>
+                  <p className="text-muted-foreground text-lg">
                     Análisis profundo de la situación actual, identificando fortalezas, debilidades y oportunidades de mejora.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-card text-center p-6 border border-border/50 rounded-xl">
+              <Card className="bg-card text-center p-8 border border-border rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <Users className="w-6 h-6" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <Users className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Planificación</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Planificación</h3>
+                  <p className="text-muted-foreground text-lg">
                     Diseño de estrategias personalizadas que involucran a todos los actores relevantes del territorio.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-card text-center p-6 border border-border/50 rounded-xl">
+              <Card className="bg-card text-center p-8 border border-border rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <Globe className="w-6 h-6" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <Globe className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Implementación</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Implementación</h3>
+                  <p className="text-muted-foreground text-lg">
                     Acompañamiento en la ejecución con monitoreo continuo y ajustes estratégicos según resultados.
                   </p>
                 </CardContent>
@@ -289,9 +291,14 @@ const GestionPublica = () => {
                 
                 {/* Social Media Icons */}
                 <div className="flex gap-6 justify-center items-center">
-                  <div className="flex items-center text-muted-foreground">
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61582131955493" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Facebook className="w-6 h-6" />
-                  </div>
+                  </a>
                   <a 
                     href="https://www.linkedin.com/company/106146305/admin/" 
                     target="_blank" 
@@ -300,9 +307,14 @@ const GestionPublica = () => {
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
-                  <div className="flex items-center text-muted-foreground">
+                  <a 
+                    href="https://www.instagram.com/itactiva/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Instagram className="w-6 h-6" />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

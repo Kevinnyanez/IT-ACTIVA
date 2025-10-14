@@ -15,17 +15,17 @@ const About = () => {
 
           {/* Descripción principal simplificada */}
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-foreground leading-relaxed max-w-4xl mx-auto font-semibold">
               IT Activa propone un trabajo colaborativo donde las definiciones se construyan en conjunto, 
               con el objetivo de generar una dinámica de comunicación fluida, transparente y de alto impacto hacia la comunidad.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-foreground leading-relaxed max-w-4xl mx-auto font-semibold">
               Proponemos que nuestros servicios desarrollen, impulsen y potencien las capacidades y condiciones de nuestros clientes, 
               para consolidar una visión clara, de impacto positivo en las acciones y en la imagen que proyecta.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-foreground leading-relaxed max-w-4xl mx-auto font-semibold">
               La comunicación produce sentidos, transmite emociones y construye identidad. La gestión transforma la realidad. 
               Juntas, desarrollan historias positivas en la comunidad.
             </p>
