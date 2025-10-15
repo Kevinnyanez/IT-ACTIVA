@@ -124,19 +124,11 @@ const ContactPage = () => {
                       <div className="grid grid-cols-1 gap-3 text-sm text-muted-foreground">
                         <div className="flex items-center">
                           <span className="text-primary mr-2">✓</span>
-                          Primera consulta diagnóstica gratuita
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-primary mr-2">✓</span>
                           Respuesta garantizada en 24 horas
                         </div>
                         <div className="flex items-center">
                           <span className="text-primary mr-2">✓</span>
                           Soluciones personalizadas a tu medida
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-primary mr-2">✓</span>
-                          Equipo experto con años de experiencia
                         </div>
                       </div>
                     </div>
@@ -228,10 +220,6 @@ const ContactPage = () => {
                       <div>
                         <p className="font-medium text-foreground">¿Cuánto tiempo toma obtener una respuesta?</p>
                         <p className="text-muted-foreground">Respondemos todas las consultas en un máximo de 24 horas.</p>
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">¿Ofrecen consultas gratuitas?</p>
-                        <p className="text-muted-foreground">Sí, la primera consulta diagnóstica es completamente gratuita.</p>
                       </div>
                       <div>
                         <p className="font-medium text-foreground">¿Trabajan con organizaciones de toda América Latina?</p>
