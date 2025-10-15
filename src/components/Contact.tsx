@@ -98,7 +98,6 @@ const Contact = () => {
                   ¿Por qué elegirnos?
                 </h4>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <p>✓ Primera consulta gratuita</p>
                   <p>✓ Respuesta en 24 horas</p>
                   <p>✓ Soluciones personalizadas</p>
                 </div>
