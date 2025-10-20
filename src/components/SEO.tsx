@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 const SEO = ({ 
-  title = "IT ACTIVA - Consultora de Comunicación Política y Gestión Pública | Argentina",
-  description = "IT ACTIVA es la consultora líder en comunicación política, gestión pública y estrategias empresariales en Argentina. Especialistas en gobiernos locales, campañas políticas y comunicación institucional.",
-  keywords = "consultoría política argentina, comunicación gubernamental, gestión pública, comunicación empresarial, estrategias políticas, gobiernos locales, comunicación institucional, campañas políticas, consultora argentina, asesoría política",
+  title = "IT ACTIVA - Consultora para Municipios y Gobiernos Locales | Argentina",
+  description = "IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado. Trabajamos con intendentes y equipos municipales.",
+  keywords = "consultoría municipios argentina, asesoría gobiernos locales, gestión pública municipal, comunicación gubernamental, consultora intendentes, servicios municipalidades, políticas públicas municipales, modernización municipios, gestión municipal argentina, comunicación política gobiernos locales, asesoramiento intendencias, consultora sector público, estrategias gobiernos municipales",
   canonicalUrl,
   ogImage = "/android-chrome-512x512.png",
   structuredData

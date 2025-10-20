@@ -129,7 +129,10 @@ const ServicesPage = () => {
                       <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-primary-foreground mb-4 shadow-soft group-hover:scale-110 transition-transform duration-300 overflow-hidden">
                         <img 
                           src={category.image}
-                          alt={category.title}
+                          alt={`${category.title} - Servicios de consultoría para municipios y gobiernos locales`}
+                          loading="lazy"
+                          width="64"
+                          height="64"
                           className="w-full h-full object-cover rounded-xl"
                         />
                       </div>

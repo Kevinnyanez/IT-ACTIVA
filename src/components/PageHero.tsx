@@ -27,7 +27,11 @@ const PageHero = ({
       <div className="absolute inset-0 z-0">
         <img 
           src={backgroundImage} 
-          alt="Fondo de ciudad" 
+          alt="IT ACTIVA - Consultora de gestión pública y comunicación para municipios y gobiernos locales en Argentina" 
+          loading="eager"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>

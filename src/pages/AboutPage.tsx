@@ -113,7 +113,10 @@ const AboutPage = () => {
               <div className="mb-8">
                 <img 
                   src="/ACTIVÁ Logo (1).png" 
-                  alt="IT ACTIVA Logo" 
+                  alt="IT ACTIVA - Consultora especializada en municipios y gobiernos locales Argentina" 
+                  loading="lazy"
+                  width="192"
+                  height="192"
                   className="h-48 w-auto mx-auto"
                 />
               </div>
@@ -151,7 +154,10 @@ const AboutPage = () => {
                     <div className="relative">
                       <img
                         src="/foto perfil IT (1).jpg"
-                        alt="Ignacio Tonelli"
+                        alt="Ignacio Tonelli - Director IT ACTIVA - Experto en comunicación política y gestión pública para municipios"
+                        loading="lazy"
+                        width="256"
+                        height="320"
                         className="w-64 h-80 object-cover object-center shadow-lg"
                       />
                     </div>

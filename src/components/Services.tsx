@@ -109,12 +109,15 @@ const Services = () => {
                   <div className="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-300 overflow-hidden shadow-lg relative">
                     <img 
                       src={category.image}
-                      alt={category.title}
+                      alt={`Consultoría ${category.title} - Servicios para municipios y gobiernos locales en Argentina`}
+                      loading="lazy"
+                      width="96"
+                      height="96"
                       className="w-full h-full object-cover rounded-2xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 via-gray-800/35 to-gray-700/30 rounded-2xl"></div>
                   </div>
-                  <CardTitle className="text-2xl lg:text-4xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-2xl lg:text-4xl font-semibold text-foreground transition-colors">
                     <span className="font-bold underline decoration-2 underline-offset-4">{category.title}</span>
                     <ExternalLink className="inline-block w-6 h-6 lg:w-7 lg:h-7 ml-2 align-middle" />
                   </CardTitle>

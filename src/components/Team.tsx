@@ -62,7 +62,10 @@ const Team = () => {
                 <div className="relative">
                   <img
                     src={leader.image}
-                    alt={leader.name}
+                    alt="Ignacio Tonelli - Fundador y Director IT ACTIVA - Licenciado en Comunicación, Consultor en gestión pública y gobiernos locales"
+                    loading="lazy"
+                    width="256"
+                    height="320"
                     className="w-64 h-80 object-cover object-center shadow-lg"
                   />
                 </div>

@@ -17,7 +17,7 @@ const Index = () => {
     "alternateName": "IT ACTIVA Consultora",
     "url": "https://itactiva.com",
     "logo": "https://itactiva.com/android-chrome-512x512.png",
-    "description": "IT ACTIVA es la consultora líder en comunicación política, gestión pública y estrategias empresariales en Argentina. Especialistas en gobiernos locales, campañas políticas y comunicación institucional.",
+    "description": "IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Coronel Pringles",
@@ -39,12 +39,14 @@ const Index = () => {
       "name": "Argentina"
     },
     "serviceType": [
-      "Consultoría Política",
-      "Comunicación Gubernamental", 
-      "Gestión Pública",
-      "Comunicación Empresarial",
-      "Estrategias Políticas",
-      "Campañas Políticas"
+      "Consultoría para Municipios",
+      "Asesoramiento Gobiernos Locales",
+      "Gestión Pública Municipal",
+      "Comunicación Gubernamental",
+      "Políticas Públicas Municipales",
+      "Modernización del Estado",
+      "Comunicación para Intendentes",
+      "Gestión Municipal"
     ],
     "sameAs": [
       "https://www.linkedin.com/company/106146305/admin/",
@@ -55,9 +57,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="IT ACTIVA - Consultora de Comunicación Política y Gestión Pública | Argentina"
-        description="IT ACTIVA es la consultora líder en comunicación política, gestión pública y estrategias empresariales en Argentina. Especialistas en gobiernos locales, campañas políticas y comunicación institucional. Transformamos tu gestión pública."
-        keywords="consultoría política argentina, comunicación gubernamental, gestión pública, comunicación empresarial, estrategias políticas, gobiernos locales, comunicación institucional, campañas políticas, consultora argentina, asesoría política"
+        title="IT ACTIVA - Consultora para Municipios y Gobiernos Locales | Argentina"
+        description="IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado. Trabajamos con intendentes y equipos municipales."
+        keywords="consultoría municipios argentina, asesoría gobiernos locales, gestión pública municipal, comunicación gubernamental, consultora intendentes, servicios municipalidades, políticas públicas municipales, modernización municipios, gestión municipal argentina, comunicación política gobiernos locales, asesoramiento intendencias, consultora sector público, estrategias gobiernos municipales"
         canonicalUrl="/"
         structuredData={structuredData}
       />

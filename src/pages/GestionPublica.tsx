@@ -102,7 +102,10 @@ const GestionPublica = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=1080&fit=crop&crop=center&auto=format" 
-              alt="Gestión Pública" 
+              alt="Gestión Pública y Gobiernos Locales - Consultoría para municipios en Argentina" 
+              loading="eager"
+              width="1920"
+              height="1080"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>
@@ -195,7 +198,7 @@ const GestionPublica = () => {
                       size="lg"
                       className="bg-primary text-primary-foreground hover:bg-primary/90"
                       onClick={() => {
-                        window.location.href = '/contacto';
+                        window.open('https://docs.google.com/forms/d/e/1FAIpQLScLdkUbQtpkhmwaqbvt8zd0M5lwtRue8SgsKlBEJNVr-ruETA/viewform', '_blank');
                       }}
                     >
                       Consultá acá
@@ -282,7 +285,7 @@ const GestionPublica = () => {
                     variant="outline" 
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                     onClick={() => {
-                      window.location.href = '/contacto';
+                      window.open('https://docs.google.com/forms/d/e/1FAIpQLScLdkUbQtpkhmwaqbvt8zd0M5lwtRue8SgsKlBEJNVr-ruETA/viewform', '_blank');
                     }}
                   >
                     Formulario de Contacto

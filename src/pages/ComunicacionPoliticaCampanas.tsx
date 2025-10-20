@@ -124,7 +124,10 @@ const ComunicacionPoliticaCampanas = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&crop=center&auto=format" 
-              alt="Comunicación Política y Campañas" 
+              alt="Comunicación Política y Campañas Electorales - Estrategias para candidatos y gobiernos" 
+              loading="eager"
+              width="1920"
+              height="1080"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-800/85"></div>
@@ -220,7 +223,7 @@ const ComunicacionPoliticaCampanas = () => {
                       size="lg"
                       className="bg-primary text-primary-foreground hover:bg-primary/90"
                       onClick={() => {
-                        window.location.href = '/contacto';
+                        window.open('https://docs.google.com/forms/d/e/1FAIpQLScLdkUbQtpkhmwaqbvt8zd0M5lwtRue8SgsKlBEJNVr-ruETA/viewform', '_blank');
                       }}
                     >
                       Consultá acá
@@ -262,52 +265,6 @@ const ComunicacionPoliticaCampanas = () => {
                         <h4 className="font-medium text-foreground text-sm uppercase tracking-wide">Beneficios principales:</h4>
                         {service.benefits.map((benefit, benefitIndex) => (
                           <div key={benefitIndex} className="flex items-center text-sm text-muted-foreground">
-                            <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
-                            <span>{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Services Section */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                <strong>Servicios Complementarios</strong>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Herramientas especializadas para fortalecer tu presencia política y maximizar el impacto de tu mensaje
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {additionalServices.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <Card key={index} className="bg-card hover:shadow-medium transition-all duration-300 border border-border/50 rounded-xl h-full">
-                    <CardHeader className="pb-4">
-                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mb-4">
-                        <IconComponent className="w-6 h-6" />
-                      </div>
-                      <CardTitle className="text-xl lg:text-2xl font-semibold text-foreground leading-tight">
-                        {service.name}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <p className="text-muted-foreground text-base mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
-                      <div className="space-y-3">
-                        <h4 className="font-medium text-foreground text-lg">Beneficios principales:</h4>
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center text-base text-muted-foreground">
                             <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
                             <span>{benefit}</span>
                           </div>
@@ -396,7 +353,7 @@ const ComunicacionPoliticaCampanas = () => {
                     variant="outline" 
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                     onClick={() => {
-                      window.location.href = '/contacto';
+                      window.open('https://docs.google.com/forms/d/e/1FAIpQLScLdkUbQtpkhmwaqbvt8zd0M5lwtRue8SgsKlBEJNVr-ruETA/viewform', '_blank');
                     }}
                   >
                     Formulario de Contacto
