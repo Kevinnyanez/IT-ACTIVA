@@ -15,8 +15,8 @@ const Index = () => {
     "@type": "Organization",
     "name": "IT ACTIVA",
     "alternateName": "IT ACTIVA Consultora",
-    "url": "https://itactiva.com",
-    "logo": "https://itactiva.com/android-chrome-512x512.png",
+    "url": "https://itactiva.com.ar",
+    "logo": "https://itactiva.com.ar/android-chrome-512x512.png",
     "description": "IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado.",
     "address": {
       "@type": "PostalAddress",

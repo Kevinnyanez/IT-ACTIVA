@@ -16,7 +16,7 @@ const ServicesPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "IT ACTIVA",
-      "url": "https://itactiva.com"
+      "url": "https://itactiva.com.ar"
     },
     "serviceType": [
       "Gestión Pública y Gobiernos Locales",
