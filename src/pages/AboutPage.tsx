@@ -179,13 +179,10 @@ const AboutPage = () => {
                     
                     <div className="mb-6">
                       <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        Soy Ignacio Tonelli, licenciado en Comunicación con más de 6 años de experiencia en consultoría y gestión pública. Me especializo en transformar la comunicación de gobiernos locales y organizaciones políticas a través de estrategias innovadoras y metodologías probadas.
-                      </p>
-                      <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        He trabajado con 4 gobiernos locales, desarrollando proyectos de comunicación estratégica, gestión de políticas públicas y modernización institucional. Mi experiencia abarca desde ONGs hasta gobiernos municipales y provinciales.
+                        Soy Ignacio Tonelli, me apasiona la comunicación y la gestión de proyectos en el ámbito público como herramientas transformadoras de la realidad. Creo en el trabajo en equipo y en la búsqueda constante de soluciones a través de estas herramientas de planificación, comunicación y gestión en todo tipo de organizaciones.
                       </p>
                       <p className="text-gray-700 text-base leading-relaxed">
-                        Como consultor y docente, me enfoco en crear soluciones personalizadas que generen impacto real y medible en las comunidades. Creo firmemente en el poder transformador de la comunicación y la gestión pública para construir sociedades más transparentes y eficientes.
+                        Soy licenciado en Comunicación, consultor, gestor y docente. Desde hace más de 15 años que me desempeño en diferentes roles tanto en ONGs como en gobiernos, en gestión y planeamiento de políticas públicas en áreas como comunicación, contenidos, educación, territorio, entre otros, desarrollando allí proyectos de gestión y acompañamiento para diferentes organismos y en diversas temáticas.
                       </p>
                     </div>
 
