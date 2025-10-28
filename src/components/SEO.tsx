@@ -10,14 +10,14 @@ interface SEOProps {
 }
 
 const SEO = ({ 
-  title = "IT ACTIVA - Consultora para Municipios y Gobiernos Locales | Argentina",
-  description = "IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado. Trabajamos con intendentes y equipos municipales.",
-  keywords = "consultoría municipios argentina, asesoría gobiernos locales, gestión pública municipal, comunicación gubernamental, consultora intendentes, servicios municipalidades, políticas públicas municipales, modernización municipios, gestión municipal argentina, comunicación política gobiernos locales, asesoramiento intendencias, consultora sector público, estrategias gobiernos municipales",
+  title = "IT Activa | Consultora de Comunicación Política y Gestión Pública Argentina",
+  description = "IT Activa es una consultora especializada en comunicación política, gestión pública y asesoramiento para municipios en Argentina. Soluciones tecnológicas y estrategias digitales para gobiernos locales.",
+  keywords = "IT Activa, consultoría municipios argentina, asesoría gobiernos locales, gestión pública municipal, comunicación gubernamental, consultora intendentes, servicios municipalidades, políticas públicas municipales, modernización municipios, gestión municipal argentina, comunicación política gobiernos locales, asesoramiento intendencias, consultora sector público, estrategias gobiernos municipales, soluciones tecnológicas argentina",
   canonicalUrl,
   ogImage = "/android-chrome-512x512.png",
   structuredData
 }: SEOProps) => {
-  const fullTitle = title.includes('IT ACTIVA') ? title : `${title} | IT ACTIVA`;
+  const fullTitle = title.includes('IT Activa') || title.includes('IT ACTIVA') ? title : `${title} | IT Activa`;
   const fullUrl = canonicalUrl ? `https://itactiva.com.ar${canonicalUrl}` : 'https://itactiva.com.ar';
 
   return (

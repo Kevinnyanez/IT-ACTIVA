@@ -13,11 +13,11 @@ const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "IT ACTIVA",
-    "alternateName": "IT ACTIVA Consultora",
+    "name": "IT Activa",
+    "alternateName": ["IT ACTIVA", "IT Activa Consultora"],
     "url": "https://itactiva.com.ar",
     "logo": "https://itactiva.com.ar/android-chrome-512x512.png",
-    "description": "IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado.",
+    "description": "IT Activa es una consultora especializada en comunicación política, gestión pública y asesoramiento para municipios en Argentina. Soluciones tecnológicas y estrategias digitales para gobiernos locales.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Coronel Pringles",
@@ -57,9 +57,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="IT ACTIVA - Consultora para Municipios y Gobiernos Locales | Argentina"
-        description="IT ACTIVA - Consultora especializada en asesoramiento para municipios y gobiernos locales en Argentina. Gestión pública municipal, políticas públicas, comunicación gubernamental y modernización del Estado. Trabajamos con intendentes y equipos municipales."
-        keywords="consultoría municipios argentina, asesoría gobiernos locales, gestión pública municipal, comunicación gubernamental, consultora intendentes, servicios municipalidades, políticas públicas municipales, modernización municipios, gestión municipal argentina, comunicación política gobiernos locales, asesoramiento intendencias, consultora sector público, estrategias gobiernos municipales"
+        title="IT Activa | Consultora de Comunicación Política y Gestión Pública Argentina"
+        description="IT Activa es una consultora especializada en comunicación política, gestión pública y asesoramiento para municipios en Argentina. Soluciones tecnológicas y estrategias digitales para gobiernos locales."
+        keywords="IT Activa, consultoría municipios argentina, asesoría gobiernos locales, gestión pública municipal, comunicación gubernamental, consultora intendentes, servicios municipalidades, políticas públicas municipales, modernización municipios, gestión municipal argentina, comunicación política gobiernos locales, asesoramiento intendencias, consultora sector público, estrategias gobiernos municipales, soluciones tecnológicas argentina"
         canonicalUrl="/"
         structuredData={structuredData}
       />
